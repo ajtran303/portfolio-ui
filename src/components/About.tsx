@@ -1,5 +1,7 @@
 import './About.css';
+
 import { useEffect, useRef, useState } from 'react';
+
 import avatarImg from '../assets/avatar2.jpg';
 
 type SocialLink = { name: string; href: string };
@@ -7,6 +9,7 @@ type AboutProps = { content: string[]; imageUrl?: string; socials: SocialLink[] 
 
 const About: React.FC<AboutProps> = ({ content, imageUrl, socials = [] }) => {
   const cardRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const vantaRef = useRef<any>(null);
   const vantaContainer = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -32,33 +35,28 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials = [] }) => {
   useEffect(() => {
     if (!vantaContainer.current || vantaRef.current) return;
 
-    // @ts-ignore
-    if (window.VANTA && typeof window.VANTA.NET === 'function') {
-      // @ts-ignore
-      vantaRef.current = window.VANTA.NET({
-        el: vantaContainer.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200,
-        minWidth: 200,
-        scale: 1,
-        scaleMobile: 1,
-        backgroundColor: 0x0a0a0a,
-        color: 0xffd700,
-        points: 10.0,
-        maxDistance: 25.0,
-        spacing: 15.0
-      });
+    // @ts-expect-error Vanta is complicated
+    vantaRef.current = window.VANTA.NET({
+      el: vantaContainer.current,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      scale: 1,
+      scaleMobile: 1,
+      backgroundColor: 0x0a0a0a,
+      color: 0xffd700,
+      points: 10.0,
+      maxDistance: 25.0,
+      spacing: 15.0
+    });
 
-      setTimeout(() => {
-        if (vantaRef.current && typeof vantaRef.current.resize === 'function') {
-          vantaRef.current.resize();
-        }
-      }, 100);
-    } else {
-      console.error('VANTA.NET not available on window');
-    }
+    setTimeout(() => {
+      if (vantaRef.current && typeof vantaRef.current.resize === 'function') {
+        vantaRef.current.resize();
+      }
+    }, 100);
 
     return () => {
       if (vantaRef.current) {
