@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink, imgUrl }
     <section className='hero'>
       <div className='hero-content'>
         <div className='hero-banner'>
-          <img src={imgUrl} alt='AJ Tran' />
+          <img src={imgUrl} alt='Banner image blending tech and art, brain and heart.' />
         </div>
         <h1>{title}</h1>
         {subtitle && <p>{subtitle}</p>}

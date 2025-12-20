@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.hero-banner {
+  width: 100%;
+  height: 250px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
