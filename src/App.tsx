@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <h1>AJ Tran Dev Portfolio</h1>
-      <h2>Featured Projects</h2>
+      <h1>Featured Projects</h1>
       <ProjectCarousel projects={projects} ProjectComponent={ProjectComponent} />
     </div>
   )

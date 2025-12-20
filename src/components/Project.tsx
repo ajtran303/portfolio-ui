@@ -7,7 +7,7 @@ type ProjectsProps = {
 const ProjectComponent = ({ project }: ProjectsProps) => {
   return (
     <div>
-      <h3>{project.slug}</h3>
+      {/* <h3>{project.slug}</h3> */}
       <div dangerouslySetInnerHTML={{ __html: project.content }} />
     </div>
   );
