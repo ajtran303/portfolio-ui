@@ -1,6 +1,6 @@
 import './ProjectCarousel.css'
 
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import type { Project } from '../api/projects';
 
