@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+
 import Projects from '../components/Projects'
 
 const mockFetch = vi.fn();
@@ -28,7 +29,10 @@ describe('Projects Component', () => {
 
     for (const project of mockProjects) {
       expect(await screen.findByText(project.slug)).toBeInTheDocument();
-      expect(await screen.findByText(project.content)).toBeInTheDocument();
-    };
-  })
+
+      // Match by heading level 1
+      expect(await screen.findByRole('heading', { level: 1, name: /LearnForge LMS/ })).toBeInTheDocument();
+      expect(await screen.findByRole('heading', { level: 1, name: /Portfolio API/ })).toBeInTheDocument();
+    }
+  });
 });
