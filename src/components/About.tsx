@@ -56,7 +56,7 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials = [] }) => {
       if (vantaRef.current && typeof vantaRef.current.resize === 'function') {
         vantaRef.current.resize();
       }
-    }, 100);
+    }, 500);
 
     return () => {
       if (vantaRef.current) {
