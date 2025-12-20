@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import type { Project } from './api/projects'
 import { fetchProjects } from './api/projects'
+import Hero from './components/Hero'
 import ProjectComponent from './components/Project'
 import ProjectCarousel from './components/ProjectCarousel'
 
@@ -19,7 +20,7 @@ function App() {
         setProjects(data);
       } catch (err: unknown) {
         if (err instanceof Error) setError(err.message);
-        else setError("Something went wrong");
+        else setError('Something went wrong');
       } finally {
         setLoading(false)
       }
@@ -32,9 +33,14 @@ function App() {
   if (error) return <p>Error: {error}</p>
 
   return (
-    <div>
-      <h1>AJ Tran Dev Portfolio</h1>
-      <h1>Featured Projects</h1>
+     <div>
+
+      <Hero
+        title='AJ Tran'
+        subtitle='Fullstack Software Engineer'
+        ctaText='View Projects'
+        ctaLink='#projects'
+      />
       <ProjectCarousel projects={projects} ProjectComponent={ProjectComponent} />
     </div>
   )
