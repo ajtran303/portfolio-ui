@@ -3,35 +3,44 @@
    ========================= */
 .about {
   width: 100%;
-  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   background-color: #6e65c6;
   padding: 4rem 2rem;
-  border-radius: 24px;;
+  border-radius: 24px;
 }
 
 /* =========================
-   Card
+   About Card
    ========================= */
+.about-card-wrapper {
+  border-radius: 24px;
+  /* round corners */
+  padding: 5px;
+  /* same as desired border width */
+  background: linear-gradient(to left, #c5a43d, #3a5bc2);
+  display: flex;
+  justify-content: center;
+}
+
+/* Actual card */
 .about-card {
+  flex: 1;
+  background: white;
+  border-radius: 19px;
+  /* slightly smaller so the gradient shows around */
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   max-width: 900px;
-  background: white;
-  border-radius: 24px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border: 5px solid #667eea;
   transition: transform 0.3s ease, opacity 0.6s ease;
   opacity: 0;
   transform: translateY(50px);
-  margin: 4rem 2rem;
   gap: 2rem;
   height: auto;
-  align-items: center;
 }
 
 .about-card.visible {
@@ -40,7 +49,7 @@
 }
 
 /* =========================
-   Image
+   About Image
    ========================= */
 .about-image {
   flex: none;
@@ -60,7 +69,7 @@
 }
 
 /* =========================
-   Content
+   About Content
    ========================= */
 .about-content {
   flex: 1;
@@ -84,7 +93,7 @@
 }
 
 /* =========================
-   Socials
+   Social Links
    ========================= */
 .about-socials a {
   margin-right: 1rem;
@@ -99,6 +108,7 @@
   transform: translateY(-2px);
   text-decoration: none;
 }
+
 /* =========================
    Mobile / Tablet
    ========================= */

@@ -1,4 +1,6 @@
-/* src/components/Footer.css */
+/* =========================
+   Footer
+   ========================= */
 .footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -7,9 +9,9 @@
   font-size: 0.9rem;
 }
 
+/* Footer Links */
 .footer a {
   color: #667eea;
-  text-decoration: none;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;

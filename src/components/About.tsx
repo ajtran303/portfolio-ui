@@ -36,24 +36,26 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials =[] }) => {
 
   return (
     <section className='about'>
-      <div
-        className={`about-card ${isVisible ? 'visible' : ''}`}
-        ref={cardRef}
-      >
-        <div className='about-image'>
-          <img src={imageUrl || avatarImg} alt='AJ Tran' />
-        </div>
-        <div className='about-content'>
-          <h2>About Me</h2>
-          <p>
-            {content.map((sentence) => <p>{sentence}</p>)}
-          </p>
-          <div className='about-socials'>
-            {socials.map((social) => (
-              <a key={social.name} href={social.href} target='_blank' rel='noopener noreferrer'>
-                {social.name}
-              </a>
-            ))}
+      <div className='about-card-wrapper'>
+        <div
+          className={`about-card ${isVisible ? 'visible' : ''}`}
+          ref={cardRef}
+        >
+          <div className='about-image'>
+            <img src={imageUrl || avatarImg} alt='AJ Tran' />
+          </div>
+          <div className='about-content'>
+            <h2>About Me</h2>
+            <p>
+              {content.map((sentence) => <p>{sentence}</p>)}
+            </p>
+            <div className='about-socials'>
+              {socials.map((social) => (
+                <a key={social.name} href={social.href} target='_blank' rel='noopener noreferrer'>
+                  {social.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
