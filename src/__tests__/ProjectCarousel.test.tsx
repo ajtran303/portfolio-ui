@@ -21,7 +21,7 @@ describe('ProjectCarousel', () => {
 
   it('cycles to the next project when clicking Next', async () => {
     render(<ProjectCarousel projects={mockProjects} ProjectComponent={ProjectComponent} />);
-    const nextButton = screen.getByText('Next');
+    const nextButton = screen.getByText('Next Project');
 
     fireEvent.click(nextButton);
 
@@ -31,7 +31,7 @@ describe('ProjectCarousel', () => {
 
   it('cycles to the previous project when clicking Previous', async () => {
     render(<ProjectCarousel projects={mockProjects} ProjectComponent={ProjectComponent} />);
-    const previousButton = screen.getByText('Previous');
+    const previousButton = screen.getByText('Previous Project');
 
     fireEvent.click(previousButton);
 
