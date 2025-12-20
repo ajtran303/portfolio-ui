@@ -1,7 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
 
-const About = () => {
+import { useEffect, useRef, useState } from 'react';
+
+type SocialLink = {
+  name: string;
+  href: string;
+};
+
+type AboutProps = {
+  content: string[];
+  imageUrl: string;
+  socials: SocialLink[];
+}
+
+const About: React.FC<AboutProps> = ({ content, imageUrl, socials =[] }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -27,17 +39,19 @@ const About = () => {
         ref={cardRef}
       >
         <div className='about-image'>
-          <img src='/avatar.jpg' alt='AJ Tran' /> {/* use root path for public */}
+          <img src={imageUrl} alt='AJ Tran' />
         </div>
         <div className='about-content'>
           <h2>About Me</h2>
           <p>
-            I'm a fullstack software engineer with a passion for building
-            scalable web applications and crafting beautiful UI/UX.
+            {content.map((sentence) => <p>{sentence}</p>)}
           </p>
           <div className='about-socials'>
-            <a href='https://github.com/ajtran303'>GitHub</a>
-            <a href='https://linkedin.com/ajtran-dev'>LinkedIn</a>
+            {socials.map((social) => (
+              <a key={social.name} href={social.href} target='_blank' rel='noopener noreferrer'>
+                {social.name}
+              </a>
+            ))}
           </div>
         </div>
       </div>

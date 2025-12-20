@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import type { Project } from './api/projects'
 import { fetchProjects } from './api/projects'
-import About from "./components/About"
+import About from './components/About'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import ProjectComponent from './components/Project'
@@ -51,13 +51,16 @@ function App() {
           ctaLink='#projects'
         />
       </section>
-      <section id="about" className='page'>
+      <section id='about' className='page'>
         <About
-          content="Hi, I'm AJ Tran, a Fullstack Software Engineer specializing in React, Node.js, and modern web development. I love building clean, efficient, and user-friendly applications."
-          imageUrl="../public/avatar.jpg"
+          content={[
+            "Hey, I'm AJ! I build fullstack apps with reliable backends, smooth APIs, and intuitive frontends.",
+            "Tech stack: Ruby on Rails, TypeScript, React/Node.js, PostgreSQL, Redis, Docker, Kubernetes, AWS, GraphQL"
+          ]}
+          imageUrl='/avatar.jpg'
           socials={[
-            { name: "GitHub", href: "https://github.com/ajtran303" },
-            { name: "LinkedIn", href: "https://linkedin.com/in/ajtran-dev" },
+            { name: 'GitHub', href: 'https://github.com/ajtran303' },
+            { name: 'LinkedIn', href: 'https://linkedin.com/in/ajtran-dev' },
           ]}
         />
       </section>
