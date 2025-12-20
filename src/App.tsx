@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import type { Project } from './api/projects'
 import { fetchProjects } from './api/projects'
 import About from './components/About'
+import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import ProjectComponent from './components/Project'
@@ -31,7 +32,7 @@ function App() {
     loadProjects();
   }, []);
 
-  if (loading) return <p>Loading projects...</p>
+  if (loading) return <p>Loading page...</p>
   if (error) return <p>Error: {error}</p>
 
   const navLinks = [
@@ -67,6 +68,7 @@ function App() {
       <section id='projects' className='page projects-page'>
         <ProjectCarousel projects={projects} ProjectComponent={ProjectComponent} />
       </section>
+      <Footer />
     </main>
   )
 }
