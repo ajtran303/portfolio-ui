@@ -1,6 +1,6 @@
 import './ProjectCarousel.css'
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import type { Project } from '../api/projects';
 
@@ -11,24 +11,29 @@ type ProjectCarouselProps = {
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, ProjectComponent }: ProjectCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const scrollRequested = useRef(false);
+  const total = projects.length;
 
   useEffect(() => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (scrollRequested.current) {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      scrollRequested.current = false; // reset
     }
-  }, [currentIndex]);
-
-  const total = projects.length;
+  }, [currentIndex]); // run after currentIndex changes
 
   if (total === 0) return <p>No projects available</p>;
 
   const handleNext = () => {
     setCurrentIndex(prev => (prev + 1) % total);
+    scrollRequested.current = true;
   };
 
   const handlePrevious = () => {
     setCurrentIndex(prev => (prev - 1 + total) % total);
+    scrollRequested.current = true;
   };
 
   const currentProject: Project = projects[currentIndex];

@@ -83,7 +83,7 @@
 
   .about-image {
     max-width: 100%;
-    min-height: 200px;
+    min-height: 475px;
   }
 
   .about-content {
@@ -91,13 +91,29 @@
     text-align: center;
   }
 
-  .about-socials a {
-    display: inline-block;
-    margin-bottom: 0.5rem;
+  .about-socials {
+    display: flex;
+    justify-content: space-around;
+    /* evenly distribute links */
+    flex-wrap: wrap;
+    /* allows wrapping if too many links */
+    width: 100%;
+    margin-top: 1rem;
   }
-}
+
+  .about-socials a {
+    margin: 0;
+    /* remove right-margin since spacing handled by flex */
+    padding: 0.25rem 0;
+    /* optional: small vertical padding */
+  }}
 
 @media (max-width: 480px) {
+  .about-image {
+      max-width: 100%;
+      min-height: 250px;
+    }
+
   .about-content h2 {
     font-size: 1.5rem;
   }
