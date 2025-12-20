@@ -1,6 +1,8 @@
-import { useState } from "react";
+import './ProjectCarousel.css'
 
-import type { Project } from "../api/projects";
+import { useState } from 'react';
+
+import type { Project } from '../api/projects';
 
 type ProjectCarouselProps = {
   projects: Project[];
@@ -19,11 +21,17 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, ProjectComp
   const currentProject: Project = projects[currentIndex];
 
   return (
-    <div>
-      <ProjectComponent project={currentProject} />
-      <p>{currentIndex + 1} / {total}</p>
-      <button onClick={handlePrevious}>Previous</button>
-      <button onClick={handleNext}>Next</button>
+    <div className='carousel'>
+      <div className='carousel-content'>
+        <ProjectComponent project={currentProject} />
+      </div>
+      <div className='carousel-navigation'>
+        <button onClick={handlePrevious}>Previous</button>
+        <button onClick={handleNext}>Next</button>
+      </div>
+      <div className='carousel-index'>
+        <p>{currentIndex + 1} / {total}</p>
+      </div>
     </div>
   );
 };

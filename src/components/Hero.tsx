@@ -1,5 +1,4 @@
-// src/components/Hero.tsx
-import "./Hero.css";
+import './Hero.css';
 
 import React from 'react';
 
