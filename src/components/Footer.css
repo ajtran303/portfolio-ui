@@ -11,8 +11,12 @@
   color: #667eea;
   text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer a:hover {
+  color: #ffd700;
+  transform: translateY(-1px);
   text-decoration: underline;
 }
