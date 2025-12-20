@@ -68,8 +68,23 @@ main {
 .hero-page {
   padding-top: 8rem;
   align-items: flex-start;
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: linear-gradient(to top, #667eea, #764ba2);
   color: white;
+}
+
+.about-page {
+  background: linear-gradient(to bottom,
+    #667eea 0%,
+    /* start of gradient */
+    #6e65c6 25%,
+    /* average of original gradient */
+    #b1addd 50%,
+    /* midpoint to gray */
+    #e0dff2 75%,
+    /* near gray */
+    #f4f4f4 100%
+    /* end gray */
+  );
 }
 
 .projects-page {

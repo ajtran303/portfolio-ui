@@ -58,7 +58,7 @@ function App() {
         />
       </section>
 
-      <section id='about' className='page' aria-labelledby='about-heading'>
+      <section id='about' className='page about-page' aria-labelledby='about-heading'>
         <About
           content={[
             "Hey, I'm AJ! I build fullstack apps with reliable backends, smooth APIs, and intuitive frontends.",
