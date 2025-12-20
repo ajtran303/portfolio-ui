@@ -48,9 +48,7 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials = [] }) => {
         color: 0xffd700,
         points: 10.0,
         maxDistance: 25.0,
-        spacing: 15.0,
-        showDots: true,
-        dotSize: 2.5
+        spacing: 15.0
       });
 
       setTimeout(() => {
