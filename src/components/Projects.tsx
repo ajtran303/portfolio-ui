@@ -5,15 +5,19 @@ type Project = {
   content: string;
 }
 
+
+
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/graphql', {
+        const response = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -51,10 +55,10 @@ const Projects = () => {
 
   return (
     <div>
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       {projects.map((project => (
         <div key={project.slug}>
-          <h3>{project.slug}</h3>
+          {/* <h3>{project.slug}</h3> */}
           <div dangerouslySetInnerHTML={{ __html: project.content}}/>
         </div>
       )))}
