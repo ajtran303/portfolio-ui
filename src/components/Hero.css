@@ -1,11 +1,4 @@
-/* src/App.css */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
   text-align: center;
 }
 

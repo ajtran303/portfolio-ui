@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react'
 
 import type { Project } from './api/projects'
 import { fetchProjects } from './api/projects'
+import About from "./components/About"
 import Hero from './components/Hero'
+import Navbar from './components/Navbar'
 import ProjectComponent from './components/Project'
 import ProjectCarousel from './components/ProjectCarousel'
 
@@ -32,17 +34,37 @@ function App() {
   if (loading) return <p>Loading projects...</p>
   if (error) return <p>Error: {error}</p>
 
-  return (
-     <div>
+  const navLinks = [
+    { label: 'Home', href: '#hero' },
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
+  ]
 
-      <Hero
-        title='AJ Tran'
-        subtitle='Fullstack Software Engineer'
-        ctaText='View Projects'
-        ctaLink='#projects'
-      />
-      <ProjectCarousel projects={projects} ProjectComponent={ProjectComponent} />
-    </div>
+  return (
+     <main>
+      <Navbar links={navLinks} />
+      <section id='hero' className='page hero-page'>
+        <Hero
+          title='AJ Tran'
+          subtitle='Fullstack Software Engineer'
+          ctaText='View Projects'
+          ctaLink='#projects'
+        />
+      </section>
+      <section id="about" className='page'>
+        <About
+          content="Hi, I'm AJ Tran, a Fullstack Software Engineer specializing in React, Node.js, and modern web development. I love building clean, efficient, and user-friendly applications."
+          imageUrl="../public/avatar.jpg"
+          socials={[
+            { name: "GitHub", href: "https://github.com/ajtran303" },
+            { name: "LinkedIn", href: "https://linkedin.com/in/ajtran-dev" },
+          ]}
+        />
+      </section>
+      <section id='projects' className='page projects-page'>
+        <ProjectCarousel projects={projects} ProjectComponent={ProjectComponent} />
+      </section>
+    </main>
   )
 }
 

@@ -1,0 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-page {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+
+.projects-page {
+  background-color: #f4f4f4;
+  color: #333;
+}
