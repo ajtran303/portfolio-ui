@@ -1,10 +1,17 @@
+/* =========================
+   About Section Wrapper
+   ========================= */
 .about {
-  padding: 4rem 2rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   background-color: #f5f5f5;
+  padding: 4rem 2rem;
 }
 
+/* =========================
+   Card
+   ========================= */
 .about-card {
   display: flex;
   flex-direction: row;
@@ -15,10 +22,14 @@
   border-radius: 24px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  border: 5px solid #667eea;
   transition: transform 0.3s ease, opacity 0.6s ease;
   opacity: 0;
   transform: translateY(50px);
-  border: 5px solid #667eea;
+  margin: 4rem 2rem;
+  gap: 2rem;
+  height: auto;
+  align-items: center;
 }
 
 .about-card.visible {
@@ -26,12 +37,17 @@
   transform: translateY(0);
 }
 
+/* =========================
+   Image
+   ========================= */
 .about-image {
-  flex: 1;
-  width: 100%;
-  min-width: 0;
-  max-width: 500px;
+  flex: none;
+  width: 40%;
+  max-width: 360px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-image img {
@@ -41,12 +57,16 @@
   border-radius: 18px;
 }
 
+/* =========================
+   Content
+   ========================= */
 .about-content {
-  flex: 2;
-  padding: 2rem;
+  flex: 1;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2rem;
 }
 
 .about-content h2 {
@@ -61,6 +81,9 @@
   margin-bottom: 1.5rem;
 }
 
+/* =========================
+   Socials
+   ========================= */
 .about-socials a {
   margin-right: 1rem;
   color: #667eea;
@@ -73,56 +96,85 @@
   color: #5a67d8;
 }
 
-/* ===== Responsive ===== */
+/* =========================
+   Mobile / Tablet
+   ========================= */
 @media (max-width: 768px) {
+  .about {
+    padding: 1.25rem 0.75rem;
+  }
+
   .about-card {
     flex-direction: column;
+    /* stack image above content */
     align-items: center;
-    padding: 1rem;
+    padding: 0.75rem;
+    margin: 0;
+    gap: 0.75rem;
   }
 
   .about-image {
-    max-width: 100%;
-    min-height: 475px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    /* always square */
+    margin: 0 auto;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .about-content {
-    padding: 1.5rem;
+    flex: none;
+    padding: 0.5rem 0;
     text-align: center;
+    gap: 0.5rem;
+  }
+
+  .about-content h2,
+  .about-content p {
+    margin: 0;
   }
 
   .about-socials {
+    margin-top: 0.5rem;
     display: flex;
-    justify-content: space-around;
-    /* evenly distribute links */
+    justify-content: center;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    /* allows wrapping if too many links */
-    width: 100%;
-    margin-top: 1rem;
   }
 
   .about-socials a {
     margin: 0;
-    /* remove right-margin since spacing handled by flex */
-    padding: 0.25rem 0;
-    /* optional: small vertical padding */
-  }}
+  }
+}
 
+/* =========================
+   Small Phones
+   ========================= */
 @media (max-width: 480px) {
+  .about {
+    padding: 1rem 0.5rem;
+  }
+
+  .about-card {
+    padding: 0.5rem;
+    gap: 0.5rem;
+    border-width: 3px;
+  }
+
   .about-image {
-      max-width: 100%;
-      min-height: 250px;
-    }
+    max-width: 280px;
+  }
 
   .about-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .about-content p {
     font-size: 1rem;
-  }
-
-  .about-card {
-    border-width: 3px;
   }
 }
