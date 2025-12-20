@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import type { Project } from './api/projects'
 import { fetchProjects } from './api/projects'
+import avatarImg from './assets/avatar2.jpg'
 import About from './components/About'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -32,14 +33,15 @@ function App() {
     loadProjects();
   }, []);
 
-  if (loading) return <p>Loading page...</p>
-  if (error) return <p>Error: {error}</p>
-
   const navLinks = [
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
   ]
+
+  if (loading) return <main><Navbar links={navLinks} /><p>Loading page...</p></main>
+  if (error) return <main><Navbar links={navLinks} /><p>Error: {error}</p></main>
+
 
   return (
      <main>
@@ -58,7 +60,7 @@ function App() {
             "Hey, I'm AJ! I build fullstack apps with reliable backends, smooth APIs, and intuitive frontends.",
             "Tech stack: Ruby on Rails, TypeScript, React/Node.js, PostgreSQL, Redis, Docker, Kubernetes, AWS, GraphQL"
           ]}
-          imageUrl='/avatar2.jpg'
+          imageUrl={avatarImg}
           socials={[
             { name: 'GitHub', href: 'https://github.com/ajtran303' },
             { name: 'LinkedIn', href: 'https://linkedin.com/in/ajtran-dev' },

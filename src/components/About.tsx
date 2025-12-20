@@ -2,6 +2,8 @@ import './About.css';
 
 import { useEffect, useRef, useState } from 'react';
 
+import avatarImg from '../assets/avatar2.jpg'
+
 type SocialLink = {
   name: string;
   href: string;
@@ -9,7 +11,7 @@ type SocialLink = {
 
 type AboutProps = {
   content: string[];
-  imageUrl: string;
+  imageUrl?: string;
   socials: SocialLink[];
 }
 
@@ -39,7 +41,7 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials =[] }) => {
         ref={cardRef}
       >
         <div className='about-image'>
-          <img src={imageUrl} alt='AJ Tran' />
+          <img src={imageUrl || avatarImg} alt='AJ Tran' />
         </div>
         <div className='about-content'>
           <h2>About Me</h2>

@@ -24,5 +24,13 @@ export const fetchProjects = async (): Promise<Project[]> => {
   if (!response.ok) throw new Error('Network response was not ok');
 
   const json = await response.json();
-  return json.data.allProjects as Project[];
+  const projects: Project[] = json.data.allProjects;
+
+  projects.sort((a, b) => {
+    const numA = parseInt(a.slug.split('-')[0], 10);
+    const numB = parseInt(b.slug.split('-')[0], 10);
+    return numA - numB;
+  });
+
+  return projects;
 };
