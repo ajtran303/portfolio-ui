@@ -58,7 +58,7 @@ function App() {
             "Hey, I'm AJ! I build fullstack apps with reliable backends, smooth APIs, and intuitive frontends.",
             "Tech stack: Ruby on Rails, TypeScript, React/Node.js, PostgreSQL, Redis, Docker, Kubernetes, AWS, GraphQL"
           ]}
-          imageUrl='/avatar.jpg'
+          imageUrl='/avatar2.jpg'
           socials={[
             { name: 'GitHub', href: 'https://github.com/ajtran303' },
             { name: 'LinkedIn', href: 'https://linkedin.com/in/ajtran-dev' },
