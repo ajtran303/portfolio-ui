@@ -39,13 +39,13 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, ProjectComp
   const currentProject: Project = projects[currentIndex];
 
   return (
-    <div className='carousel'>
+    <div className='carousel' aria-label='Project Carousel'>
       <div className='carousel-content'>
         <ProjectComponent project={currentProject} />
       </div>
       <div className='carousel-navigation'>
-        <button onClick={handlePrevious}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <button onClick={handlePrevious}>Previous Project</button>
+        <button onClick={handleNext}>Next Project</button>
       </div>
       <div className='carousel-index'>
         <p>{currentIndex + 1} / {total}</p>

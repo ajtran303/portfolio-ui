@@ -35,31 +35,32 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials =[] }) => {
   }, []);
 
   return (
-    <section className='about'>
+    <article className='about'>
       <div className='about-card-wrapper'>
         <div
           className={`about-card ${isVisible ? 'visible' : ''}`}
           ref={cardRef}
         >
-          <div className='about-image'>
+          <figure className='about-image'>
             <img src={imageUrl || avatarImg} alt='AJ Tran' />
-          </div>
+          </figure>
+
           <div className='about-content'>
             <h2>About Me</h2>
-            <p>
-              {content.map((sentence) => <p>{sentence}</p>)}
-            </p>
-            <div className='about-socials'>
+            {content.map((sentence) => <p>{sentence}</p>)}
+
+            <nav className='about-socials' aria-label="Social Links">
               {socials.map((social) => (
                 <a key={social.name} href={social.href} target='_blank' rel='noopener noreferrer'>
                   {social.name}
                 </a>
               ))}
-            </div>
+            </nav>
           </div>
+
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 

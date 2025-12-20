@@ -13,7 +13,7 @@ type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink, imgUrl }) => {
   return (
-    <section className='hero'>
+    <section className='hero' aria-label='Hero'>
       <div className='hero-content'>
         <div className='hero-banner'>
           <img src={imgUrl} alt='Banner image blending tech and art, brain and heart.' />

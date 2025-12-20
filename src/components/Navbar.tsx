@@ -8,7 +8,7 @@ type NavbarProps = {
 
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
   return (
-    <nav className='navbar'>
+    <nav className='navbar' aria-label='Main Navigation'>
       <ul className='navbar-links'>
         {links.map((link) => (
           <li key={link.href}>

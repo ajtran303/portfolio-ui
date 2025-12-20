@@ -47,7 +47,8 @@ function App() {
   return (
      <main>
       <Navbar links={navLinks} />
-      <section id='hero' className='page hero-page'>
+
+      <section id='hero' className='page hero-page' aria-label='Hero'>
         <Hero
           title='AJ Tran'
           subtitle='Fullstack Software Engineer'
@@ -56,10 +57,12 @@ function App() {
           imgUrl={bannerImg}
         />
       </section>
-      <section id='about' className='page'>
+
+      <section id='about' className='page' aria-labelledby='about-heading'>
         <About
           content={[
             "Hey, I'm AJ! I build fullstack apps with reliable backends, smooth APIs, and intuitive frontends.",
+            "---",
             "Tech stack: Ruby on Rails, TypeScript, React/Node.js, PostgreSQL, Redis, Docker, Kubernetes, AWS, GraphQL"
           ]}
           imageUrl={avatarImg}
@@ -69,9 +72,11 @@ function App() {
           ]}
         />
       </section>
-      <section id='projects' className='page projects-page'>
+
+      <section id='projects' className='page projects-page' aria-labelledby="projects-heading">
         <ProjectCarousel projects={projects} ProjectComponent={ProjectComponent} />
       </section>
+
       <Footer />
     </main>
   )

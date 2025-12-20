@@ -2,12 +2,12 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className='footer' id='footer'>
       <p>
         &copy; {new Date().getFullYear()} AJ Tran. All rights reserved.
       </p>
       <p>
-        <a href="mailto:ajtrandev@gmail.com">ajtrandev@gmail.com</a>
+        <a href='mailto:ajtrandev@gmail.com'>ajtrandev@gmail.com</a>
       </p>
     </footer>
   );
