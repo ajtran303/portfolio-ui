@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import type { Project } from './api/projects'
 import { fetchProjects } from './api/projects'
 import avatarImg from './assets/avatar2.jpg'
+import bannerImg from './assets/banner.png'
 import About from './components/About'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -52,6 +53,7 @@ function App() {
           subtitle='Fullstack Software Engineer'
           ctaText='View Projects'
           ctaLink='#projects'
+          imgUrl={bannerImg}
         />
       </section>
       <section id='about' className='page'>

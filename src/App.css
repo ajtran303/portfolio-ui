@@ -16,6 +16,8 @@ main {
 }
 
 .hero-page {
+  padding-top: 8rem;
+  align-items: flex-start;
   background: linear-gradient(to right, #667eea, #764ba2);
   color: white;
 }
