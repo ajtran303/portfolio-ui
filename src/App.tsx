@@ -54,7 +54,6 @@ function App() {
           subtitle='Fullstack Software Engineer'
           ctaText='View Projects'
           ctaLink='#projects'
-          imgUrl={bannerImg}
         />
       </section>
 

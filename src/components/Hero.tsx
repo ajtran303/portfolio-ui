@@ -1,17 +1,34 @@
 import './Hero.css';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
+import banner from '../assets/banner.png';
+import smallBanner from '../assets/banner_small.png';
 
 type HeroProps = {
   title: string;
   subtitle: string;
   ctaText: string;
   ctaLink: string;
-  imgUrl: string;
 };
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink, imgUrl }) => {
+const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink }) => {
+  const [imgUrl, setImgUrl] = useState(banner);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 480px)');
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setImgUrl(e.matches ? smallBanner : banner);
+    };
+
+    setImgUrl(mediaQuery.matches ? smallBanner : banner);
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   return (
     <section className='hero' aria-label='Hero'>
       <div className='hero-content'>
