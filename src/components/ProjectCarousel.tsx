@@ -48,7 +48,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, ProjectComp
         <button onClick={handleNext}>Next Project</button>
       </div>
       <div className='carousel-index'>
-        <p>{currentIndex + 1} / {total}</p>
+        <p>Project {currentIndex + 1} / {total}</p>
       </div>
     </div>
   );
