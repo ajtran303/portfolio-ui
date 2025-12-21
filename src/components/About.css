@@ -33,9 +33,7 @@
   padding: 5px;
   background: linear-gradient(to left,
     rgba(197, 164, 61, 0.7),
-    /* 70% opacity gold */
     rgba(58, 91, 194, 0.7)
-    /* 70% opacity blue */
   );
   display: flex;
   justify-content: center;
@@ -44,7 +42,7 @@
 /* Actual card */
 .about-card {
   flex: 1;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 19px;
   overflow: hidden;
   display: flex;
