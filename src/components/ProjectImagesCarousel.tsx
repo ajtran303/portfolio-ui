@@ -1,4 +1,4 @@
-import './ProjectImagesCarousel.css'
+import './ProjectImagesCarousel.css';
 
 import { useLayoutEffect, useState } from "react";
 
@@ -8,24 +8,41 @@ type ProjectImagesProps = {
 
 const ProjectImagesCarousel = ({ imageUrls }: ProjectImagesProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imgError, setImgError] = useState(false);
 
   useLayoutEffect(() => {
     setCurrentIndex(0);
   }, [imageUrls]);
 
-  if (imageUrls.length === 0) return null;
+  if (imageUrls.length === 0) {
+    return (
+      <div className='image-carousel placeholder'>No images available for this project.</div>
+    )
+  };
 
-  const handleNext = () => setCurrentIndex((currentIndex + 1) % imageUrls.length);
-  const handlePrev = () =>
+  const handleNext = () => {
+    setCurrentIndex((currentIndex + 1) % imageUrls.length);
+    setImgError(false);
+  };
+
+  const handlePrev = () => {
     setCurrentIndex((currentIndex - 1 + imageUrls.length) % imageUrls.length);
+    setImgError(false);
+  };
 
   return (
     <div className="image-carousel">
-      <img
-        src={imageUrls[currentIndex]}
-        alt={`Project image ${currentIndex + 1}`}
-        className="carousel-image"
-      />
+      {!imgError ? (
+        <img
+          src={imageUrls[currentIndex]}
+          alt={`Project image ${currentIndex + 1}`}
+          className="carousel-image"
+        />
+      ) : (
+        <div className='carousel-image placeholder'>
+          <p>Image failed to load</p>
+        </div>
+      )}
       <div className="carousel-controls">
         <button onClick={handlePrev}>Previous</button>
         <p>

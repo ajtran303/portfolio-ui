@@ -1,13 +1,13 @@
-import './Project.css'
+import './Project.css';
 
 import { useEffect, useMemo,useRef } from "react";
 
-import type { Project } from '../api/projects'
-import ProjectImagesCarousel from './ProjectImagesCarousel'
+import type { Project } from '../api/projects';
+import ProjectImagesCarousel from './ProjectImagesCarousel';
 
 type ProjectsProps = {
   project: Project;
-}
+};
 
 const ProjectComponent = ({ project }: ProjectsProps) => {
   const containerRef = useRef<HTMLDivElement>(null);

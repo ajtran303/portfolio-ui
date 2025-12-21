@@ -7,7 +7,7 @@ import type { Project } from '../api/projects';
 type ProjectCarouselProps = {
   projects: Project[];
   ProjectComponent: React.ComponentType<{ project: Project}>;
-}
+};
 
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, ProjectComponent }: ProjectCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
