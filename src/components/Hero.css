@@ -10,7 +10,7 @@
    ========================= */
 .hero-banner {
   width: 100%;
-  height: 250px;
+  height: 396px;
   overflow: hidden;
   animation: slideFromTop 0.8s ease-out forwards;
 }

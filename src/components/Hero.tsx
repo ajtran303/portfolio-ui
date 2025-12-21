@@ -1,6 +1,5 @@
 import './Hero.css';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import banner from '../assets/banner.png';
 import smallBanner from '../assets/banner_small.png';
@@ -13,27 +12,20 @@ type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink }) => {
-  const [imgUrl, setImgUrl] = useState(banner);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 550px)');
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setImgUrl(e.matches ? smallBanner : banner);
-    };
-
-    setImgUrl(mediaQuery.matches ? smallBanner : banner);
-
-    mediaQuery.addEventListener('change', handleChange);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
   return (
     <section className='hero' aria-label='Hero'>
       <div className='hero-content'>
         <div className='hero-banner'>
-          <img src={imgUrl} alt='Banner image blending tech and art, brain and heart.' />
+          <picture>
+            <source
+              srcSet={smallBanner}
+              media="(max-width: 550px)"
+            />
+            <img
+              src={banner}
+              alt="Banner image blending tech and art, brain and heart."
+            />
+          </picture>
         </div>
         <h1>{title}</h1>
         {subtitle && <p>{subtitle}</p>}
