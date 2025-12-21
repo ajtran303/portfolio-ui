@@ -50,7 +50,7 @@ function App() {
       <section id='hero' className='page hero-page' aria-label='Hero'>
         <Hero
           title='AJ Tran'
-          subtitle='Fullstack Software Engineer'
+          subtitle='Full-stack engineer building reliable backends, smooth APIs, and intuitive frontends.'
           ctaText='View Projects'
           ctaLink='#projects'
         />
@@ -59,9 +59,9 @@ function App() {
       <section id='about' className='page about-page' aria-labelledby='about-heading'>
         <About
           content={[
-            "Hey, I'm AJ! I build fullstack apps with reliable backends, smooth APIs, and intuitive frontends.",
-            "---",
-            "Tech stack: Ruby on Rails, TypeScript, React/Node.js, PostgreSQL, Redis, Docker, Kubernetes, AWS, GraphQL"
+            "Hey, I'm AJ!",
+            "I specialize in Ruby, Java, Python, and modern JavaScript frameworks, designing scalable systems, high-traffic APIs, and efficient developer workflows.",
+            "I'm also passionate about mentoring, improving developer experience, and exploring AI-powered tools to enhance productivity.",
           ]}
           imageUrl={avatarImg}
           socials={[
