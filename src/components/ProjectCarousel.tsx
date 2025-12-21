@@ -40,6 +40,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects, ProjectComp
 
   return (
     <div className='carousel' aria-label='Project Carousel'>
+      <h1>Featured Projects</h1>
       <div className='carousel-content'>
         <ProjectComponent project={currentProject} />
       </div>
