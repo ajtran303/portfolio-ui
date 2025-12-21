@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, ctaText, ctaLink }) => {
   const [imgUrl, setImgUrl] = useState(banner);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 480px)');
+    const mediaQuery = window.matchMedia('(max-width: 550px)');
 
     const handleChange = (e: MediaQueryListEvent) => {
       setImgUrl(e.matches ? smallBanner : banner);
