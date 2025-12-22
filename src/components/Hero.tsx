@@ -1,4 +1,5 @@
 import './Hero.css';
+
 import React from 'react';
 
 import banner from '../assets/banner.png';

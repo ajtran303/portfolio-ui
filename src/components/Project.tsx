@@ -1,6 +1,6 @@
 import './Project.css';
 
-import { useEffect, useMemo,useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
 import type { Project } from '../api/projects';
 import ProjectImagesCarousel from './ProjectImagesCarousel';

@@ -1,5 +1,6 @@
 import './Navbar.css';
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 type NavbarProps = {
   links: { label: string; href: string }[];
