@@ -62,7 +62,7 @@ const About: React.FC<AboutProps> = ({ content, imageUrl, socials = [] }) => {
         scale: 1,
         scaleMobile: 1,
         backgroundColor: 0x0a0a0a,
-        color: 0xffd700,
+        color: 0xff00c8a6,
         points: 10.0,
         maxDistance: 25.0,
         spacing: 15.0
