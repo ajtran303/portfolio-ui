@@ -40,19 +40,25 @@ export default function About({
 
   // Card visibility observer
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (cardRef.current) observer.observe(cardRef.current);
-    return () => observer.disconnect();
+    // Small delay to ensure animation is visible even if element is already in viewport
+    const timeoutId = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '-50px' }
+      );
+      if (cardRef.current) observer.observe(cardRef.current);
+    }, 300);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   // Initialize Vanta
