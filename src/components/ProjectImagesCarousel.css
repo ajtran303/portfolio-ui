@@ -52,6 +52,10 @@
   margin-top: 0.5rem;
 }
 
+.single-image {
+  justify-content: center;
+}
+
 .carousel-controls button {
   background-color: #667eea;
   color: white;

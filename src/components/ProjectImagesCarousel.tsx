@@ -1,4 +1,4 @@
-import './ProjectImagesCarousel.css';
+import "./ProjectImagesCarousel.css";
 
 import { useLayoutEffect, useState } from "react";
 
@@ -16,9 +16,11 @@ const ProjectImagesCarousel = ({ imageUrls }: ProjectImagesProps) => {
 
   if (imageUrls.length === 0) {
     return (
-      <div className='image-carousel placeholder'>No images available for this project.</div>
-    )
-  };
+      <div className="image-carousel placeholder">
+        No images available for this project.
+      </div>
+    );
+  }
 
   const handleNext = () => {
     setCurrentIndex((currentIndex + 1) % imageUrls.length);
@@ -39,17 +41,23 @@ const ProjectImagesCarousel = ({ imageUrls }: ProjectImagesProps) => {
           className="carousel-image"
         />
       ) : (
-        <div className='carousel-image placeholder'>
+        <div className="carousel-image placeholder">
           <p>Image failed to load</p>
         </div>
       )}
-      <div className="carousel-controls">
-        <button onClick={handlePrev}>Previous</button>
-        <p>
-          {currentIndex + 1} / {imageUrls.length}
-        </p>
-        <button onClick={handleNext}>Next</button>
-      </div>
+      {imageUrls.length === 1 ? (
+        <div className="carousel-controls single-image">
+          <p>1 / 1</p>
+        </div>
+      ) : (
+        <div className="carousel-controls">
+          <button onClick={handlePrev}>Previous</button>
+          <p>
+            {currentIndex + 1} / {imageUrls.length}
+          </p>
+          <button onClick={handleNext}>Next</button>
+        </div>
+      )}
     </div>
   );
 };
