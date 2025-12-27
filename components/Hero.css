@@ -20,26 +20,26 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+.hero-banner .banner-desktop {
   display: block;
 }
 
-.banner-desktop {
-  display: block;
-}
-
-.banner-mobile {
+.hero-banner .banner-mobile {
   display: none;
 }
 
 @media (max-width: 550px) {
-  .banner-desktop {
+  .hero-banner .banner-desktop {
     display: none;
   }
-  .banner-mobile {
+  .hero-banner .banner-mobile {
     display: block;
   }
   .hero-banner {
-    height: 200px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 

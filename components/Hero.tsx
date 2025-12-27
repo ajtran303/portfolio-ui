@@ -27,7 +27,7 @@ export default function Hero({ title, subtitle, ctaText, ctaLink }: HeroProps) {
             src="/banner_small.png"
             alt="Banner image blending tech and art, brain and heart."
             width={550}
-            height={200}
+            height={550}
             priority
             unoptimized
             className="banner-mobile"
