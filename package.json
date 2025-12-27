@@ -4,16 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint . --fix",
-    "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^16.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "three": "^0.182.0",
     "vanta": "^0.5.24"
   },

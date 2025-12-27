@@ -1,0 +1,12 @@
+.project-content {
+  width: 100%;
+}
+
+.project-content img {
+  max-width: 100%;
+  max-height: 60vh;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
