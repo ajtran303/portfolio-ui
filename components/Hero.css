@@ -1,0 +1,117 @@
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  text-align: center;
+}
+
+/* =========================
+   Banner
+   ========================= */
+.hero-banner {
+  width: 100%;
+  height: 396px;
+  overflow: hidden;
+  animation: slideFromTop 0.8s ease-out forwards;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.banner-desktop {
+  display: block;
+}
+
+.banner-mobile {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .banner-desktop {
+    display: none;
+  }
+  .banner-mobile {
+    display: block;
+  }
+  .hero-banner {
+    height: 200px;
+  }
+}
+
+/* =========================
+   Hero Content
+   ========================= */
+.hero-content h1,
+.hero-content p,
+.hero-cta {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   Call to Action
+   ========================= */
+.hero-cta {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: #764ba2;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #764ba2;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   Animations
+   ========================= */
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

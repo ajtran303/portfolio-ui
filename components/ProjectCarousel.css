@@ -1,0 +1,64 @@
+/* =========================
+   Projects Carousel
+   ========================= */
+
+/* Carousel Container */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Carousel Content Box */
+.carousel-content {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Carousel Index / Counter */
+.carousel-index {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.carousel-navigation button {
+  background-color: #667eea;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover / Active Feedback */
+.carousel-navigation button:hover {
+  background-color: #3b50c4;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}

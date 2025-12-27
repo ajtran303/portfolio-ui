@@ -1,0 +1,51 @@
+---
+title: "LearnForge LMS"
+order: 1
+images:
+  - "/images/learnforge-lms/instructor_course_dash.png"
+  - "/images/learnforge-lms/instructor_lesson_dash.png"
+  - "/images/learnforge-lms/student_lesson_viewer.png"
+---
+
+## LearnForge LMS
+
+### Summary
+
+A full-stack Learning Management System built with Ruby on Rails 8. Instructors create courses with rich text lessons and image attachments. Learners enroll, track progress, and navigate through content. Features Hotwire for real-time updates, Action Text for rich content editing, and comprehensive test coverage.
+
+[View the code on GitHub](https://github.com/ajtran303/learnforge-lms/)
+
+---
+
+### Highlights
+
+- **Authentication & Authorization:** Secure login with bcrypt and role-based access control for Learners and Instructors
+- **Rich Text Lesson Editor:** Trix-powered editor with formatting tools, code snippets, and image attachments
+- **Course Workflow:** Draft/published states, inline editing with Turbo Frames, and real-time updates
+- **Learner Progress Tracking:** Visual progress bars, lesson completion, resume functionality, and enrollment management
+- **Real-time UI:** Turbo Stream updates for enrollment, unenrollment, lesson completion, and flash messages
+- **Test-Driven Development:** RSpec system and model tests covering all major features
+- **Dark Mode Interface:** Custom styled UI with responsive mobile support
+
+---
+
+### Tech Stack
+
+- **Backend:** Ruby on Rails 8.1, PostgreSQL
+- **Frontend:** Hotwire (Turbo), Bootstrap 5
+- **Rich Text:** Action Text, Trix Editor, Active Storage
+- **Authentication:** bcrypt (has_secure_password)
+- **Testing:** RSpec, Capybara, FactoryBot, Shoulda Matchers
+- **Deployment:** Render
+
+---
+
+### Live Demo
+
+[LearnForge LMS](https://learnforge-lms.onrender.com/)
+
+```
+instructor1@example.com / password (Instructor)
+instructor2@example.com / password (Instructor)
+student@example.com / password (Learner)
+```

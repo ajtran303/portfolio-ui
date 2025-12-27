@@ -1,0 +1,86 @@
+/* =====================
+   Global Styles
+   ===================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-rubik), 'Rubik', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================
+   Headings
+   ===================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-rubik), 'Rubik', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+}
+
+/* =====================
+   Links & Buttons
+   ===================== */
+a {
+  font-family: var(--font-rubik), 'Rubik', sans-serif;
+  font-weight: 500;
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #ffd700;
+  transform: translateY(-1px);
+  text-decoration: underline;
+}
+
+/* =====================
+   Main / Page Layout
+   ===================== */
+main {
+  scroll-behavior: smooth;
+}
+
+.page {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* =====================
+   Specific Page Styles
+   ===================== */
+.hero-page {
+  align-items: flex-start;
+  background: linear-gradient(to top, #667eea, #764ba2);
+  color: white;
+}
+
+.about-page {
+  background: linear-gradient(to bottom,
+    #667eea 0%,
+    #6e65c6 25%,
+    #b1addd 50%,
+    #e0dff2 75%,
+    #f4f4f4 100%
+  );
+}
+
+.projects-page {
+  background-color: #f4f4f4;
+  color: #333;
+}
