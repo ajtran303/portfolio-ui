@@ -1,13 +1,13 @@
 ---
-title: "Case Study: Artist Lyrical Analysis"
+title: "Case Study: Lyrical Analysis"
 order: 5
 ---
 
-## Case Study: Artist Lyrical Analysis
+## Case Study: Lyrical Analysis
 
 ### Overview
 
-A full-stack web application that performs NLP on song lyrics to discover hidden themes, analyze sentiment patterns, and identify lyrical motifs. Users search for an artist, select an album, and receive comprehensive lyrical analysis: making NLP accessible to anyone curious about the deeper patterns in music.
+A full-stack web application that performs NLP on song lyrics to discover hidden themes, analyze sentiment patterns, and identify lyrical motifs. Users search for an artist or an album, and receive comprehensive lyrical analysis: making NLP accessible to anyone curious about the deeper patterns in music.
 
 ### Technical Challenges & Solutions
 

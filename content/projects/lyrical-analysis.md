@@ -1,13 +1,13 @@
 ---
-title: "Artist Lyrical Analysis"
+title: "Lyrical Analysis"
 order: 4
 images:
-  - "/images/artist-lyrical-analysis/search_page.png"
-  - "/images/artist-lyrical-analysis/result_page.png"
-  - "/images/artist-lyrical-analysis/compare_page.png"
+  - "/images/lyrical-analysis/search_page.png"
+  - "/images/lyrical-analysis/result_page.png"
+  - "/images/lyrical-analysis/compare_page.png"
 ---
 
-## Artist Lyrical Analysis
+## Lyrical Analysis
 
 ### Summary
 
