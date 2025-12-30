@@ -1,70 +1,39 @@
 ---
-title: "Artist Lyrical Analysis"
+title: "Artist Lyrical Analyzer"
 order: 3
+# images:
+#   - "/images/artist-lyrical-analyzer/"
+#   - "/images/artist-lyrical-analyzer/"
+#   - "/images/artist-lyrical-analyzer/"
 ---
 
-## Artist Lyrical Analysis
+## Artist Lyrical Analyzer
 
-### Overview
+### Summary
 
-A full-stack web application that performs NLP on song lyrics to discover hidden themes, analyze sentiment patterns, and identify lyrical motifs. Users search for an artist, select an album, and receive comprehensive lyrical analysis—making NLP accessible to anyone curious about the deeper patterns in music.
+A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, word frequency patterns, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music.
 
-### Technical Challenges & Solutions
+### Highlights
 
-#### External API Limitations
-
-The Genius API returns 403 errors from cloud hosting providers due to IP-based blocking. This meant the original architecture relying solely on Genius would fail in production.
-
-The solution was a hybrid approach: Discogs API handles artist and album metadata reliably from any IP, the official Genius API performs song searches without being blocked, and direct scraping of Genius song pages retrieves lyrics. This separation made the system resilient to any single API's limitations.
-
-#### Long-Running Analysis Tasks
-
-NLP analysis including LDA topic modeling and sentiment analysis takes 30-60 seconds per album, causing HTTP timeouts and a frozen UI experience.
-
-Celery with Redis handles async processing. Users receive an immediate job ID while workers process in the background. The frontend polls for status with progress indicators and rotating fun facts to keep users engaged. Completed results cache in PostgreSQL for instant retrieval on repeat visits.
-
-#### Sparse Pagination Results
-
-Discogs returns all releases including singles, compilations, and guest appearances, but users only want studio albums. After filtering, some API pages had zero qualifying results, breaking infinite scroll—the UI would stop loading even though more albums existed.
-
-The solution was adaptive pagination that fetches multiple API pages until enough filtered results accumulate. Instead of mapping one frontend page to one API page, the backend collects results across multiple calls before responding, ensuring consistent batches for the frontend.
-
-#### Mobile Responsiveness
-
-The Winamp-inspired UI with playlist-style album lists overflowed horizontally on mobile devices, requiring sideways scrolling to reach the analyze button.
-
-Responsive breakpoints adapt the layout progressively: full playlist with index numbers and inline buttons on desktop, hidden index and compact text on tablets, and full-width stacked buttons on mobile for easy tapping.
-
-### Architecture Decisions
-
-Flask was chosen over Django for its lightweight nature and clean Celery integration. Redis serves double duty as both task broker and result backend, simplifying infrastructure. The architecture scales horizontally by adding workers.
-
-LDA was selected for topic modeling because it excels at discovering latent themes and produces interpretable results—topics appear as weighted word distributions that humans can understand.
-
-Server-side rendering with vanilla JavaScript was chosen over a frontend framework for faster initial page loads and minimal bundle size.
-
-### Key Features
-
-**Topic Discovery**: Preprocesses lyrics through tokenization, stemming, and stopword removal. LDA identifies 5-8 latent themes with auto-generated names and prevalence weights showing how each theme appears across songs.
-
-**Sentiment Timeline**: TextBlob calculates polarity scores for each track, visualizing the emotional arc across the album. Color-coded bar charts use blue for positive and orange for negative, ensuring colorblind accessibility.
-
-**Vocabulary Analysis**: Word frequency distribution reveals common terms, vocabulary richness metrics show language diversity, and metaphor detection scans for recurring imagery across twelve categories including love, darkness, nature, and time.
-
-**Retro UI**: Winamp-inspired aesthetic with LCD-style displays featuring cyan glow effects, beveled borders mimicking classic media player chrome, and a colorblind-friendly palette throughout.
+- Hybrid API architecture combining Discogs for metadata and Genius for lyrics, solving cloud IP blocking issues
+- Async processing with Celery and Redis handles 30-60 second NLP analyses without HTTP timeouts
+- Adaptive pagination fetches multiple API pages to ensure consistent results after filtering
+- LDA topic modeling automatically discovers and names 5-8 latent themes per album
+- Sentiment timeline visualizes emotional arc across tracks with colorblind-friendly colors
+- Winamp-inspired UI with responsive breakpoints for mobile compatibility
+- Production-ready security including rate limiting, input sanitization, and CSRF protection
 
 ### Tech Stack
 
-Flask backend with Gunicorn as the production server. Celery handles async task processing with Redis as the message broker. PostgreSQL stores analysis results through SQLAlchemy.
+- **Backend**: Flask, Gunicorn, Celery
+- **Database**: PostgreSQL, SQLAlchemy, Redis
+- **NLP**: Gensim (LDA), TextBlob, NLTK
+- **APIs**: Discogs, Genius
+- **Frontend**: HTML, CSS, vanilla JavaScript
+- **Infrastructure**: Docker, Docker Compose
+- **Security**: Flask-Limiter, Flask-Talisman, Bleach
+- **A Love For Music**
 
-Gensim powers LDA topic modeling, TextBlob handles sentiment analysis, and NLTK provides text preprocessing. Discogs and Genius supply external data.
+### Live Demo
 
-Docker Compose orchestrates the infrastructure. Security includes Flask-Limiter for rate limiting, Bleach for input sanitization, CSRF protection via Flask-WTF, and Flask-Talisman for security headers in production.
-
-### Lessons Learned
-
-API reliability varies significantly between providers. Building fallback strategies for external dependencies proved essential when the primary approach failed in production.
-
-Progress indicators and fun facts dramatically improved perceived performance during long operations, even though actual analysis time remained unchanged.
-
-Mobile-first design should be built in from the start. Adapting the desktop-optimized Winamp aesthetic to mobile required rethinking the entire album list interaction pattern.
+[Artist Lyrical Analyzer](https://artist-analyzer-web.onrender.com/)
