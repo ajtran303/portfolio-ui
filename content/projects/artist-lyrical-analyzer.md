@@ -13,6 +13,8 @@ images:
 
 A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, word frequency patterns, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music.
 
+---
+
 ### Highlights
 
 - **Multi-source lyrics retrieval** with Musixmatch and lyrics.ovh fallback chain
@@ -25,6 +27,8 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Winamp-inspired UI** with responsive breakpoints for mobile compatibility
 - **Production-ready security** including rate limiting, input sanitization, and CSRF protection
 
+---
+
 ### Tech Stack
 
 - **Backend**: Flask, Gunicorn, Celery
@@ -34,6 +38,8 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Frontend**: HTML, CSS, vanilla JavaScript
 - **Infrastructure**: Docker, Docker Compose, Render
 - **Security**: Flask-Limiter, Flask-Talisman, Bleach
+
+---
 
 ### Live Demo
 
