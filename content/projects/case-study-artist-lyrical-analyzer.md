@@ -11,11 +11,17 @@ A full-stack web application that performs NLP on song lyrics to discover hidden
 
 ### Technical Challenges & Solutions
 
-#### External API Limitations
+#### Cloud-Based Lyrics Retrieval
 
-The Genius API returns 403 errors from cloud hosting providers due to IP-based blocking. This meant the original architecture relying solely on Genius would fail in production.
+Lyrics APIs present unique challenges for cloud-hosted applications. Direct scraping of lyrics websites returns 403 errors from cloud provider IPs, and most lyrics databases have restrictive terms or limited coverage.
 
-The solution was a hybrid approach: Discogs API handles artist and album metadata reliably from any IP, the official Genius API performs song searches without being blocked, and direct scraping of Genius song pages retrieves lyrics. This separation made the system resilient to any single API's limitations.
+The solution was a multi-source waterfall approach. Musixmatch API serves as the primary source with the largest commercial lyrics database. When unavailable, the system falls back to lyrics.ovh, a free community API. As a final fallback, Genius song search combined with web scraping handles edge cases. This layered approach maximizes lyrics coverage while gracefully degrading when services are unavailable.
+
+#### Metadata and Lyrics Source Separation
+
+The original architecture used a single API for both artist metadata and lyrics, creating a single point of failure. When that API blocked cloud requests, the entire application stopped working.
+
+Separating concerns solved this problem. Discogs API handles all artist discovery, album metadata, and tracklists reliably from any IP address. Lyrics fetching became an independent concern with its own fallback chain. This separation means metadata always works, and lyrics retrieval degrades gracefully rather than failing completely.
 
 #### Long-Running Analysis Tasks
 
@@ -45,7 +51,9 @@ Server-side rendering with vanilla JavaScript was chosen over a frontend framewo
 
 ### Lessons Learned
 
-API reliability varies significantly between providers. Building fallback strategies for external dependencies proved essential when the primary approach failed in production.
+API reliability varies significantly between providers and deployment environments. Building fallback strategies with multiple data sources proved essential when the primary approach failed in production.
+
+Separating metadata retrieval from content retrieval creates more resilient systems. When lyrics APIs fail, users can still browse artists and albums—partial functionality beats complete failure.
 
 Progress indicators and fun facts dramatically improved perceived performance during long operations, even though actual analysis time remained unchanged.
 
