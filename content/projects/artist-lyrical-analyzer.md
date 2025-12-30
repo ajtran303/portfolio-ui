@@ -2,9 +2,9 @@
 title: "Artist Lyrical Analyzer"
 order: 3
 images:
-  - "/images/artist-lyrical-analyzer/search_page"
-  - "/images/artist-lyrical-analyzer/result_page"
-  - "/images/artist-lyrical-analyzer/compare_page"
+  - "/images/artist-lyrical-analyzer/search_page.png"
+  - "/images/artist-lyrical-analyzer/result_page.png"
+  - "/images/artist-lyrical-analyzer/compare_page.png"
 ---
 
 ## Artist Lyrical Analyzer
