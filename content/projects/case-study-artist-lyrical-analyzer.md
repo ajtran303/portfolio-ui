@@ -1,6 +1,6 @@
 ---
 title: "Case Study: Artist Lyrical Analysis"
-order: 4
+order: 5
 ---
 
 ## Case Study: Artist Lyrical Analysis
