@@ -31,7 +31,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ### Tech Stack
 
-- **Backend**: Flask, Gunicorn, Celery
+- **Backend**: Python, Flask, Gunicorn, Celery
 - **Database**: PostgreSQL, SQLAlchemy, Redis
 - **NLP**: Gensim (LDA), TextBlob, NLTK
 - **APIs**: Discogs, Musixmatch, lyrics.ovh
