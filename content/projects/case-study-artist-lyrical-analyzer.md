@@ -15,7 +15,7 @@ A full-stack web application that performs NLP on song lyrics to discover hidden
 
 Lyrics APIs present unique challenges for cloud-hosted applications. Direct scraping of lyrics websites returns 403 errors from cloud provider IPs, and most lyrics databases have restrictive terms or limited coverage.
 
-The solution was a multi-source waterfall approach. Musixmatch API serves as the primary source with the largest commercial lyrics database. When unavailable, the system falls back to lyrics.ovh, a free community API. As a final fallback, Genius song search combined with web scraping handles edge cases. This layered approach maximizes lyrics coverage while gracefully degrading when services are unavailable.
+The solution was a multi-source waterfall approach. Musixmatch API serves as the primary source with the largest commercial lyrics database. When unavailable, the system falls back to lyrics.ovh, a free community API. This layered approach maximizes lyrics coverage while gracefully degrading when services are unavailable. Genius was initially included as a fallback but was removed since cloud provider IPs are blocked by their anti-scraping measures.
 
 #### Metadata and Lyrics Source Separation
 

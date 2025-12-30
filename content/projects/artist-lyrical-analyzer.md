@@ -15,7 +15,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ### Highlights
 
-- Multi-source lyrics retrieval with Musixmatch, lyrics.ovh, and Genius fallback chain
+- Multi-source lyrics retrieval with Musixmatch and lyrics.ovh fallback chain
 - Discogs API for reliable artist and album metadata from any deployment environment
 - Async processing with Celery and Redis handles 30-60 second NLP analyses without HTTP timeouts
 - Adaptive pagination fetches multiple API pages to ensure consistent results after filtering
@@ -29,7 +29,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Backend**: Flask, Gunicorn, Celery
 - **Database**: PostgreSQL, SQLAlchemy, Redis
 - **NLP**: Gensim (LDA), TextBlob, NLTK
-- **APIs**: Discogs, Musixmatch, lyrics.ovh, Genius
+- **APIs**: Discogs, Musixmatch, lyrics.ovh
 - **Frontend**: HTML, CSS, vanilla JavaScript
 - **Infrastructure**: Docker, Docker Compose, Render
 - **Security**: Flask-Limiter, Flask-Talisman, Bleach
