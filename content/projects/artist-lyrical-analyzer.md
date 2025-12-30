@@ -15,14 +15,14 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ### Highlights
 
-- Multi-source lyrics retrieval with Musixmatch and lyrics.ovh fallback chain
-- Discogs API for reliable artist and album metadata from any deployment environment
-- Async processing with Celery and Redis handles 30-60 second NLP analyses without HTTP timeouts
-- Adaptive pagination fetches multiple API pages to ensure consistent results after filtering
-- LDA topic modeling automatically discovers and names 5-8 latent themes per album
-- Sentiment timeline visualizes emotional arc across tracks with colorblind-friendly colors
-- Winamp-inspired UI with responsive breakpoints for mobile compatibility
-- Production-ready security including rate limiting, input sanitization, and CSRF protection
+- **Multi-source lyrics retrieval** with Musixmatch and lyrics.ovh fallback chain
+- **Discogs API** for reliable artist and album metadata from any deployment environment
+- **Async processing** with Celery and Redis handles 30-60 second NLP analyses without HTTP timeouts
+- **Adaptive pagination** fetches multiple API pages to ensure consistent results after filtering
+- **LDA topic modeling** automatically discovers and names 5-8 latent themes per album
+- **Sentiment timeline** visualizes emotional arc across tracks with colorblind-friendly colors
+- **Winamp-inspired UI** with responsive breakpoints for mobile compatibility
+- **Production-ready security** including rate limiting, input sanitization, and CSRF protection
 
 ### Tech Stack
 
