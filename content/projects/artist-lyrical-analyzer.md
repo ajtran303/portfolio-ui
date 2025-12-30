@@ -1,10 +1,10 @@
 ---
 title: "Artist Lyrical Analyzer"
 order: 3
-# images:
-#   - "/images/artist-lyrical-analyzer/"
-#   - "/images/artist-lyrical-analyzer/"
-#   - "/images/artist-lyrical-analyzer/"
+images:
+  - "/images/artist-lyrical-analyzer/search_page"
+  - "/images/artist-lyrical-analyzer/result_page"
+  - "/images/artist-lyrical-analyzer/compare_page"
 ---
 
 ## Artist Lyrical Analyzer
@@ -20,6 +20,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Async processing** with Celery and Redis handles 30-60 second NLP analyses without HTTP timeouts
 - **Adaptive pagination** fetches multiple API pages to ensure consistent results after filtering
 - **LDA topic modeling** automatically discovers and names 5-8 latent themes per album
+- **Album comparison** with side-by-side sentiment, vocabulary stats, and shared theme discovery
 - **Sentiment timeline** visualizes emotional arc across tracks with colorblind-friendly colors
 - **Winamp-inspired UI** with responsive breakpoints for mobile compatibility
 - **Production-ready security** including rate limiting, input sanitization, and CSRF protection

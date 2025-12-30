@@ -7,7 +7,7 @@ order: 4
 
 ### Overview
 
-A full-stack web application that performs NLP on song lyrics to discover hidden themes, analyze sentiment patterns, and identify lyrical motifs. Users search for an artist, select an album, and receive comprehensive lyrical analysis—making NLP accessible to anyone curious about the deeper patterns in music.
+A full-stack web application that performs NLP on song lyrics to discover hidden themes, analyze sentiment patterns, and identify lyrical motifs. Users search for an artist, select an album, and receive comprehensive lyrical analysis: making NLP accessible to anyone curious about the deeper patterns in music.
 
 ### Technical Challenges & Solutions
 
@@ -31,7 +31,7 @@ Celery with Redis handles async processing. Users receive an immediate job ID wh
 
 #### Sparse Pagination Results
 
-Discogs returns all releases including singles, compilations, and guest appearances, but users only want studio albums. After filtering, some API pages had zero qualifying results, breaking infinite scroll—the UI would stop loading even though more albums existed.
+Discogs returns all releases including singles, compilations, and guest appearances, but users only want studio albums. After filtering, some API pages had zero qualifying results, breaking infinite scroll: the UI would stop loading even though more albums existed.
 
 The solution was adaptive pagination that fetches multiple API pages until enough filtered results accumulate. Instead of mapping one frontend page to one API page, the backend collects results across multiple calls before responding, ensuring consistent batches for the frontend.
 
@@ -41,11 +41,17 @@ The Winamp-inspired UI with playlist-style album lists overflowed horizontally o
 
 Responsive breakpoints adapt the layout progressively: full playlist with index numbers and inline buttons on desktop, hidden index and compact text on tablets, and full-width stacked buttons on mobile for easy tapping.
 
+#### Album Comparison Feature
+
+Users wanted to compare albums side-by-side to see how an artist's lyrical style evolved or how two different artists approach similar themes. This required combining data from two separate analyses and generating new insights.
+
+The solution reuses existing analysis results stored in PostgreSQL. When comparing, the API fetches both completed analyses and runs a combined LDA analysis on lyrics from both albums to discover shared themes. The comparison page shows sentiment differences, vocabulary statistics, word overlap, and jointly discovered topics: all computed on-demand without requiring re-analysis of individual albums.
+
 ### Architecture Decisions
 
 Flask was chosen over Django for its lightweight nature and clean Celery integration. Redis serves double duty as both task broker and result backend, simplifying infrastructure. The architecture scales horizontally by adding workers.
 
-LDA was selected for topic modeling because it excels at discovering latent themes and produces interpretable results—topics appear as weighted word distributions that humans can understand.
+LDA was selected for topic modeling because it excels at discovering latent themes and produces interpretable results: topics appear as weighted word distributions that humans can understand.
 
 Server-side rendering with vanilla JavaScript was chosen over a frontend framework for faster initial page loads and minimal bundle size.
 
@@ -53,7 +59,7 @@ Server-side rendering with vanilla JavaScript was chosen over a frontend framewo
 
 API reliability varies significantly between providers and deployment environments. Building fallback strategies with multiple data sources proved essential when the primary approach failed in production.
 
-Separating metadata retrieval from content retrieval creates more resilient systems. When lyrics APIs fail, users can still browse artists and albums—partial functionality beats complete failure.
+Separating metadata retrieval from content retrieval creates more resilient systems. When lyrics APIs fail, users can still browse artists and albums: partial functionality beats complete failure.
 
 Progress indicators and fun facts dramatically improved perceived performance during long operations, even though actual analysis time remained unchanged.
 
