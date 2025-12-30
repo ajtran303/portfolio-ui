@@ -1,6 +1,6 @@
 ---
 title: "Case Study: Simplifying My Portfolio Architecture"
-order: 4
+order: 5
 ---
 
 ## Case Study: Simplifying My Portfolio Architecture
