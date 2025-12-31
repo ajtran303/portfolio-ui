@@ -43,4 +43,4 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ### Live Demo
 
-[Artist Lyrical Analyzer](https://artist-analyzer-web.onrender.com/)
+[Lyrical Analysis](https://artist-analyzer-web.onrender.com/)
