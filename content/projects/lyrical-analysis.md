@@ -11,7 +11,7 @@ images:
 
 ### Summary
 
-A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, word frequency patterns, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music.
+A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, emotional profiling with 8 distinct emotions, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music.
 
 [View the code on GitHub](https://github.com/ajtran303/artist_analyzer)
 
@@ -24,7 +24,8 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Async processing** with Celery and Redis handles 30-60 second NLP analyses without HTTP timeouts
 - **Adaptive pagination** fetches multiple API pages to ensure consistent results after filtering
 - **LDA topic modeling** automatically discovers and names 5-8 latent themes per album
-- **Album comparison** with side-by-side sentiment, vocabulary stats, and shared theme discovery
+- **Emotional profiling** with NRC Emotion Lexicon identifies 8 distinct emotions (joy, trust, fear, etc.)
+- **Album comparison** with side-by-side sentiment, emotion face-offs, and shared theme discovery
 - **Sentiment timeline** visualizes emotional arc across tracks with colorblind-friendly colors
 - **Winamp-inspired UI** with responsive breakpoints for mobile compatibility
 - **Production-ready security** including rate limiting, input sanitization, and CSRF protection
@@ -35,7 +36,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 - **Backend**: Python, Flask, Gunicorn, Celery
 - **Database**: PostgreSQL, SQLAlchemy, Redis
-- **NLP**: Gensim (LDA), TextBlob, NLTK
+- **NLP**: Gensim (LDA), TextBlob, NLTK, NRCLex
 - **APIs**: Discogs, Musixmatch, lyrics.ovh
 - **Frontend**: HTML, CSS, vanilla JavaScript
 - **Infrastructure**: Docker, Docker Compose, Render
