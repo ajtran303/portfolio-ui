@@ -1,6 +1,6 @@
 ---
 title: "Haunted House Tycoon"
-order: 2
+order: 4
 images:
   - "/images/haunt-tycoon/gameplay.gif"
 ---

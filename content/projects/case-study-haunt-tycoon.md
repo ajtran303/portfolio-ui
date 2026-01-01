@@ -1,6 +1,6 @@
 ---
 title: "Case Study: Haunted House Tycoon"
-order: 3
+order: 5
 ---
 
 ## Case Study: Haunted House Tycoon
