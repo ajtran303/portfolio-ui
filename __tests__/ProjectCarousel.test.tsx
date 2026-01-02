@@ -1,9 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import type { Project } from '@/lib/types';
-
 import ProjectCarousel from '@/components/ProjectCarousel';
+import type { Project } from '@/lib/types';
 
 describe('ProjectCarousel', () => {
   const mockProjects: Project[] = [

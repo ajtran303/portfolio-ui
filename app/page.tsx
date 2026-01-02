@@ -1,10 +1,9 @@
-import { getAllProjects } from "@/lib/projects";
-
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import { getAllProjects } from "@/lib/projects";
 
 export default async function HomePage() {
   const projects = await getAllProjects();

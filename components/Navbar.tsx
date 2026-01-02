@@ -1,10 +1,10 @@
 'use client';
 
+import './Navbar.css';
+
 import { useEffect, useState } from 'react';
 
 import type { NavLink } from '@/lib/types';
-
-import './Navbar.css';
 
 type NavbarProps = {
   links: NavLink[];

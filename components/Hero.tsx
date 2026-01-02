@@ -1,6 +1,6 @@
-import Image from 'next/image';
-
 import './Hero.css';
+
+import Image from 'next/image';
 
 type HeroProps = {
   title: string;

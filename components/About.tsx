@@ -1,12 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import './About.css';
 
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 import type { SocialLink } from '@/lib/types';
-
-import './About.css';
 
 type AboutProps = {
   content: string[];

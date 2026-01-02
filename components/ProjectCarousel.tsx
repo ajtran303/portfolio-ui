@@ -1,12 +1,12 @@
 'use client';
 
+import './ProjectCarousel.css';
+
 import { useEffect, useRef, useState } from 'react';
 
 import type { Project } from '@/lib/types';
 
 import ProjectCard from './Project';
-
-import './ProjectCarousel.css';
 
 type ProjectCarouselProps = {
   projects: Project[];

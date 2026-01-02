@@ -1,10 +1,9 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
+import './ProjectImagesCarousel.css';
 
 import Image from 'next/image';
-
-import './ProjectImagesCarousel.css';
+import { useLayoutEffect, useState } from 'react';
 
 type ProjectImagesProps = {
   imageUrls: string[];

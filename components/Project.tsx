@@ -1,12 +1,12 @@
 'use client';
 
+import './Project.css';
+
 import { useEffect, useRef } from 'react';
 
 import type { Project } from '@/lib/types';
 
 import ProjectImagesCarousel from './ProjectImagesCarousel';
-
-import './Project.css';
 
 type ProjectProps = {
   project: Project;

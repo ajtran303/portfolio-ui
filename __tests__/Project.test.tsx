@@ -1,9 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import type { Project } from '@/lib/types';
-
 import ProjectCard from '@/components/Project';
+import type { Project } from '@/lib/types';
 
 describe('Project Component', () => {
   it('renders project content from props', async () => {
