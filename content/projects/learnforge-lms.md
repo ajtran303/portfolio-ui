@@ -11,7 +11,7 @@ images:
 
 ### Summary
 
-A full-stack Learning Management System built with Ruby on Rails 8. Instructors create courses with rich text lessons and image attachments. Learners enroll, track progress, and navigate through content. Features Hotwire for real-time updates, Action Text for rich content editing, and comprehensive test coverage.
+A full-stack Learning Management System built with Ruby on Rails 8. Instructors create courses with rich text lessons and image attachments. Learners enroll, track progress, and navigate through content. Features Hotwire for real-time updates, Action Text for rich content editing, and 89% test coverage (75 RSpec examples).
 
 [View the code on GitHub](https://github.com/ajtran303/learnforge-lms/)
 
