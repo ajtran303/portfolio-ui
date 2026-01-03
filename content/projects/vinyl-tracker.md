@@ -3,9 +3,9 @@ title: "Vinyl Tracker"
 order: 6
 images:
   - "/images/vinyl-tracker/profile.png"
-  - "/images/vinyl-tracker/genres.png"
-  - "/images/vinyl-tracker/labels.png"
   - "/images/vinyl-tracker/timeline.png"
+  - "/images/vinyl-tracker/labels.png"
+  - "/images/vinyl-tracker/genres.png"
 ---
 
 ## Vinyl Tracker
