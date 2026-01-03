@@ -11,7 +11,7 @@ images:
 
 ### Summary
 
-A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, emotional profiling with 8 distinct emotions, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music. 90% test coverage (356 pytest examples).
+A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, emotional profiling with 8 distinct emotions, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music. 90% test coverage (350+ pytest examples).
 
 [View the code on GitHub](https://github.com/ajtran303/artist_analyzer)
 
@@ -28,7 +28,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Album comparison** with side-by-side sentiment, emotion face-offs, and shared theme discovery
 - **Sentiment timeline** visualizes emotional arc across tracks with colorblind-friendly colors
 - **Winamp-inspired UI** with responsive breakpoints for mobile compatibility
-- **Production-ready security** including rate limiting, input sanitization, and CSRF protection
+- **Production-ready security** including rate limiting (10 submissions per minute), input sanitization, and CSRF protection
 
 ---
 

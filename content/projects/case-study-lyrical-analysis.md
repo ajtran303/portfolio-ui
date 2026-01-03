@@ -53,7 +53,7 @@ The solution reuses existing analysis results stored in PostgreSQL. When compari
 
 Flask was chosen over Django for its lightweight nature and clean Celery integration. Redis serves double duty as both task broker and result backend, simplifying infrastructure. The architecture scales horizontally by adding workers.
 
-LDA was selected for topic modeling because it excels at discovering latent themes and produces interpretable results: topics appear as weighted word distributions that humans can understand.
+LDA was selected for topic modeling because it excels at discovering latent themes and produces interpretable results: topics appear as word distributions that humans can understand. 5-8 topics balances granularity against coherence for typical album sizes (10-15 songs). Fewer topics produce overly broad themes while more topics fragment into noise or duplicates when there aren't enough documents per topic. The default of 7 also aligns with ease of users interpreting results.
 
 Server-side rendering with vanilla JavaScript was chosen over a frontend framework for faster initial page loads and minimal bundle size.
 
