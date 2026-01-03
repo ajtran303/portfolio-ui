@@ -1,6 +1,6 @@
 ---
 title: "Portfolio Website"
-order: 6
+order: 7
 images:
   - "/images/portfolio-website/hero_page.png"
   - "/images/portfolio-website/about_page.png"
