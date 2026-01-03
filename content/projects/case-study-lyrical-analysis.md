@@ -11,6 +11,24 @@ A full-stack web application that performs NLP on song lyrics to discover hidden
 
 ### Technical Challenges & Solutions
 
+#### Long-Running Analysis Tasks
+
+NLP analysis including LDA topic modeling and sentiment analysis takes 30-60 seconds per album, causing HTTP timeouts and a frozen UI experience.
+
+Celery with Redis handles async processing. Users receive an immediate job ID while workers process in the background. The frontend polls for status with progress indicators and rotating fun facts to keep users engaged. Completed results cache in PostgreSQL for instant retrieval on repeat visits.
+
+#### Security & Input Validation
+
+User input flows through search queries, artist names, and album titles before reaching the database and external APIs. Without proper sanitization, these become vectors for XSS, SQL injection, and API manipulation.
+
+A multi-layer defense handles this. Bleach strips HTML tags from all inputs at the API boundary, preventing script injection. SQLAlchemy's parameterized queries protect the database layer. Artist and album names must match a validated character pattern that permits legitimate punctuation (ampersands, slashes, parentheses, apostrophes) while rejecting control characters and angle brackets. Error messages are sanitized before display to prevent reflected XSS, and a logging filter redacts sensitive tokens from application logs. The test suite includes dedicated security tests covering injection attempts, malformed payloads, and boundary conditions.
+
+#### Handling Artist Names with Punctuation
+
+Artist names like "AC/DC", "Guns N' Roses", and "Sunn O)))" contain characters that break naive string handling. Slashes confuse URL routing, ampersands split query parameters, and apostrophes corrupt database queries or API calls.
+
+The solution treats punctuation as legitimate input rather than escaping it away. The validation regex explicitly allows common music punctuation: `[\w\s\-\.\'\&/\(\),!?]+`. URL encoding preserves these characters through HTTP transport. The Discogs client strips API-specific markers (disambiguation numbers like "(7)" and ANV asterisks) while preserving the artist's actual punctuation. This approach lets users search naturally while keeping the data pipeline intact.
+
 #### Cloud-Based Lyrics Retrieval
 
 Lyrics APIs present unique challenges for cloud-hosted applications. Direct scraping of lyrics websites returns 403 errors from cloud provider IPs, and most lyrics databases have restrictive terms or limited coverage.
@@ -22,24 +40,6 @@ The solution was a multi-source waterfall approach. Musixmatch API serves as the
 The original architecture used a single API for both artist metadata and lyrics, creating a single point of failure. When that API blocked cloud requests, the entire application stopped working.
 
 Separating concerns solved this problem. Discogs API handles all artist discovery, album metadata, and tracklists reliably from any IP address. Lyrics fetching became an independent concern with its own fallback chain. This separation means metadata always works, and lyrics retrieval degrades gracefully rather than failing completely.
-
-#### Long-Running Analysis Tasks
-
-NLP analysis including LDA topic modeling and sentiment analysis takes 30-60 seconds per album, causing HTTP timeouts and a frozen UI experience.
-
-Celery with Redis handles async processing. Users receive an immediate job ID while workers process in the background. The frontend polls for status with progress indicators and rotating fun facts to keep users engaged. Completed results cache in PostgreSQL for instant retrieval on repeat visits.
-
-#### Sparse Pagination Results
-
-Discogs returns all releases including singles, compilations, and guest appearances, but users only want studio albums. After filtering, some API pages had zero qualifying results, breaking infinite scroll: the UI would stop loading even though more albums existed.
-
-The solution was adaptive pagination that fetches multiple API pages until enough filtered results accumulate. Instead of mapping one frontend page to one API page, the backend collects results across multiple calls before responding, ensuring consistent batches for the frontend.
-
-#### Mobile Responsiveness
-
-The Winamp-inspired UI with playlist-style album lists overflowed horizontally on mobile devices, requiring sideways scrolling to reach the analyze button.
-
-Responsive breakpoints adapt the layout progressively: full playlist with index numbers and inline buttons on desktop, hidden index and compact text on tablets, and full-width stacked buttons on mobile for easy tapping.
 
 #### Album Comparison Feature
 
@@ -57,10 +57,10 @@ Server-side rendering with vanilla JavaScript was chosen over a frontend framewo
 
 ### Lessons Learned
 
+Progress indicators and fun facts dramatically improved perceived performance during long operations, even though actual analysis time remained unchanged.
+
+Input validation should accommodate real-world data, not just sanitize it. Artist names contain legitimate punctuation that naive escaping would destroy. The goal is permitting valid input while blocking malicious payloads, which requires understanding the domain.
+
 API reliability varies significantly between providers and deployment environments. Building fallback strategies with multiple data sources proved essential when the primary approach failed in production.
 
 Separating metadata retrieval from content retrieval creates more resilient systems. When lyrics APIs fail, users can still browse artists and albums: partial functionality beats complete failure.
-
-Progress indicators and fun facts dramatically improved perceived performance during long operations, even though actual analysis time remained unchanged.
-
-Mobile-first design should be built in from the start. Adapting the desktop-optimized Winamp aesthetic to mobile required rethinking the entire album list interaction pattern.
