@@ -14,7 +14,7 @@ images:
 
 A CLI tool that analyzes a Discogs vinyl collection and generates visualizations plus a shareable taste profile card. Pulls collection data via the Discogs API, calculates statistics across decades, genres, labels, and artists, then determines a "collector type" label based on listening patterns. Built to answer the question: "What kind of record collector am I?"
 
-<!-- [View the code on GitHub](https://github.com/ajtran303/vinyl-tracker) -->
+[View the code on GitHub](https://github.com/ajtran303/vinyl-tracker)
 
 ---
 
@@ -26,7 +26,6 @@ A CLI tool that analyzes a Discogs vinyl collection and generates visualizations
 - **Genre and style breakdowns** with percentage calculations and top-N rankings
 - **Label loyalty detection** identifies favorite record labels
 - **Artist completionism tracking** finds artists with 3+ records in collection
-- **Rarity metrics** surface lowest-have, most-wanted, and highest-value records
 - **Collector type classification** assigns labels like "80s Goth Archivist" or "Genre Fluid" based on rule matching
 - **Dark-themed visualizations** including decade histogram, genre radar chart, label bars, and release timeline
 - **Shareable profile card** generates a 1200x630 social-ready image with key stats and collector type
