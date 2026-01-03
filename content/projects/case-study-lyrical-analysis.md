@@ -5,6 +5,8 @@ order: 3
 
 ## Case Study: Lyrical Analysis
 
+[View the code on GitHub](https://github.com/ajtran303/artist_analyzer)
+
 ### Overview
 
 A full-stack web application that performs NLP on song lyrics to discover hidden themes, analyze sentiment patterns, and identify lyrical motifs. Users search for an artist or an album, and receive comprehensive lyrical analysis: making NLP accessible to anyone curious about the deeper patterns in music.
