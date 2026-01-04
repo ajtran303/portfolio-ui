@@ -28,7 +28,7 @@ export default async function HomePage() {
   ];
 
   return (
-    <main>
+    <main id="main-content">
       <Navbar links={navLinks} />
 
       <section id="hero" className="page hero-page" aria-label="Hero">

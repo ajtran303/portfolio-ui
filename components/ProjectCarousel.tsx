@@ -43,15 +43,25 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
   return (
     <div className="carousel" aria-label="Project Carousel">
-      <h1>Featured Projects</h1>
+      <h2 id="projects-heading">Featured Projects</h2>
       <div className="carousel-content">
         <ProjectCard project={currentProject} />
       </div>
       <div className="carousel-navigation">
-        <button onClick={handlePrevious}>Previous Project</button>
-        <button onClick={handleNext}>Next Project</button>
+        <button
+          onClick={handlePrevious}
+          aria-label={`Previous project (${currentIndex + 1} of ${total})`}
+        >
+          Previous Project
+        </button>
+        <button
+          onClick={handleNext}
+          aria-label={`Next project (${currentIndex + 1} of ${total})`}
+        >
+          Next Project
+        </button>
       </div>
-      <div className="carousel-index">
+      <div className="carousel-index" aria-live="polite">
         <p>
           Project {currentIndex + 1} / {total}
         </p>

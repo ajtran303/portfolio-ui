@@ -155,7 +155,7 @@ export default function About({
           </figure>
 
           <div className="about-content">
-            <h2>About Me</h2>
+            <h2 id="about-heading">About Me</h2>
             {content.map((sentence, i) => (
               <p key={i}>{sentence}</p>
             ))}
