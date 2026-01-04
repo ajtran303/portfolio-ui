@@ -64,7 +64,11 @@ export default function About({
   useEffect(() => {
     if (!vantaContainer.current || vantaRef.current || vantaFailed) return;
 
-    if (!canUseWebGL()) {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (prefersReducedMotion || !canUseWebGL()) {
       setVantaFailed(true);
       return;
     }
