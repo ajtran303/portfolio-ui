@@ -42,10 +42,4 @@ A full-stack Learning Management System built with Ruby on Rails 8. Instructors 
 
 ### Live Demo
 
-[LearnForge LMS](https://learnforge-lms.onrender.com/)
-
-```
-instructor1@example.com / password (Instructor)
-instructor2@example.com / password (Instructor)
-student@example.com / password (Learner)
-```
+[LearnForge LMS](https://learnforge-lms.onrender.com/) - Requires login. Demo credentials available on request.
