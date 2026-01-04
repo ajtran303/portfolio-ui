@@ -2,9 +2,12 @@
 title: "Goth Dance Analyzer"
 order: 6
 images:
-  - "/images/goth-dance-analyzer/skeleton_tracking.png"
-  - "/images/goth-dance-analyzer/summary.png"
-  - "/images/goth-dance-analyzer/detailed_metrics.png"
+  - url: "/images/goth-dance-analyzer/skeleton_tracking.png"
+    alt: "Skeleton overlay tracking dancer pose landmarks"
+  - url: "/images/goth-dance-analyzer/summary.png"
+    alt: "Summary page with dancer fingerprints and archetypes"
+  - url: "/images/goth-dance-analyzer/detailed_metrics.png"
+    alt: "Detailed metrics heatmap comparing dancers across songs"
 ---
 
 ## Goth Dance Analyzer

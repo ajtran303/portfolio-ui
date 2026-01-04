@@ -2,9 +2,12 @@
 title: "Lyrical Analysis"
 order: 1
 images:
-  - "/images/lyrical-analysis/search_page.png"
-  - "/images/lyrical-analysis/result_page.png"
-  - "/images/lyrical-analysis/compare_page.png"
+  - url: "/images/lyrical-analysis/search_page.png"
+    alt: "Search page with artist input field"
+  - url: "/images/lyrical-analysis/result_page.png"
+    alt: "Analysis results showing sentiment and topic breakdown"
+  - url: "/images/lyrical-analysis/compare_page.png"
+    alt: "Side-by-side album comparison view"
 ---
 
 ## Lyrical Analysis

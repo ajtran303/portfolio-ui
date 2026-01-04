@@ -4,12 +4,12 @@ import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-import type { Project } from './types';
+import type { Project, ProjectImage } from './types';
 
 type ProjectFrontmatter = {
   title: string;
   order: number;
-  images: string[];
+  images: ProjectImage[];
 };
 
 const projectsDirectory = path.join(process.cwd(), 'content/projects');

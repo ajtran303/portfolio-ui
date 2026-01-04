@@ -2,10 +2,14 @@
 title: "Vinyl Tracker"
 order: 8
 images:
-  - "/images/vinyl-tracker/profile.png"
-  - "/images/vinyl-tracker/timeline.png"
-  - "/images/vinyl-tracker/labels.png"
-  - "/images/vinyl-tracker/genres.png"
+  - url: "/images/vinyl-tracker/profile.png"
+    alt: "Shareable profile card with collector type and stats"
+  - url: "/images/vinyl-tracker/timeline.png"
+    alt: "Release year timeline showing collection distribution"
+  - url: "/images/vinyl-tracker/labels.png"
+    alt: "Bar chart of top record labels in collection"
+  - url: "/images/vinyl-tracker/genres.png"
+    alt: "Radar chart showing genre breakdown"
 ---
 
 ## Vinyl Tracker

@@ -2,9 +2,12 @@
 title: "LearnForge LMS"
 order: 3
 images:
-  - "/images/learnforge-lms/instructor_course_dash.png"
-  - "/images/learnforge-lms/instructor_lesson_dash.png"
-  - "/images/learnforge-lms/student_lesson_viewer.png"
+  - url: "/images/learnforge-lms/instructor_course_dash.png"
+    alt: "Instructor dashboard showing course management interface"
+  - url: "/images/learnforge-lms/instructor_lesson_dash.png"
+    alt: "Lesson editor with rich text formatting tools"
+  - url: "/images/learnforge-lms/student_lesson_viewer.png"
+    alt: "Student view of lesson content with progress tracking"
 ---
 
 ## LearnForge LMS

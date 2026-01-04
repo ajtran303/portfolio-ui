@@ -1,8 +1,13 @@
+export type ProjectImage = {
+  url: string;
+  alt: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
   order: number;
-  images: string[];
+  images: ProjectImage[];
   content: string;
 };
 

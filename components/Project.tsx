@@ -43,7 +43,7 @@ export default function ProjectComponent({ project }: ProjectProps) {
         className="project-content"
         dangerouslySetInnerHTML={{ __html: project.content }}
       />
-      <ProjectImagesCarousel key={project.slug} imageUrls={project.images} />
+      <ProjectImagesCarousel key={project.slug} images={project.images} />
     </article>
   );
 }
