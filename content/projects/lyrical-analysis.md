@@ -1,6 +1,6 @@
 ---
 title: "Lyrical Analysis"
-order: 2
+order: 1
 images:
   - "/images/lyrical-analysis/search_page.png"
   - "/images/lyrical-analysis/result_page.png"

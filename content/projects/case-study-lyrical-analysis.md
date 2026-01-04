@@ -1,6 +1,6 @@
 ---
 title: "Case Study: Lyrical Analysis"
-order: 3
+order: 2
 ---
 
 ## Case Study: Lyrical Analysis

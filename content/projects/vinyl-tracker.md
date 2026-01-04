@@ -1,6 +1,6 @@
 ---
 title: "Vinyl Tracker"
-order: 6
+order: 8
 images:
   - "/images/vinyl-tracker/profile.png"
   - "/images/vinyl-tracker/timeline.png"

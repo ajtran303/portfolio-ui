@@ -1,6 +1,6 @@
 ---
 title: "LearnForge LMS"
-order: 1
+order: 3
 images:
   - "/images/learnforge-lms/instructor_course_dash.png"
   - "/images/learnforge-lms/instructor_lesson_dash.png"
