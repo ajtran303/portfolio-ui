@@ -12,9 +12,9 @@ images:
     alt: "Radar chart showing genre breakdown"
 ---
 
-## Vinyl Tracker
+### Vinyl Tracker
 
-### Summary
+#### Summary
 
 A CLI tool that analyzes a Discogs vinyl collection and generates visualizations plus a shareable taste profile card. Pulls collection data via the Discogs API, calculates statistics across decades, genres, labels, and artists, then determines a "collector type" label based on listening patterns. Built to answer the question: "What kind of record collector am I?"
 
@@ -22,7 +22,7 @@ A CLI tool that analyzes a Discogs vinyl collection and generates visualizations
 
 ---
 
-### Highlights
+#### Highlights
 
 - **Discogs API integration** fetches full collection with pagination and rate limit handling
 - **Local JSON caching** avoids redundant API calls and enables offline analysis
@@ -36,7 +36,7 @@ A CLI tool that analyzes a Discogs vinyl collection and generates visualizations
 
 ---
 
-### Tech Stack
+#### Tech Stack
 
 - **Language**: Python 3.14
 - **API**: Discogs API via discogs_client
@@ -47,7 +47,7 @@ A CLI tool that analyzes a Discogs vinyl collection and generates visualizations
 
 ---
 
-### Collector Types
+#### Collector Types
 
 - **Goth Archivist** dominates in gothic rock, darkwave, and post-punk
 - **Industrial Militant** heavy on industrial and EBM

@@ -6,9 +6,9 @@ images:
     alt: "Gameplay showing visitors navigating a haunted house attraction"
 ---
 
-## Haunted House Tycoon
+### Haunted House Tycoon
 
-### Summary
+#### Summary
 
 A deterministic park management game where players balance fear and profit. Build haunted attractions that scare visitors for money, but push too hard and they panic, leave, or die. Pure function architecture keeps core logic testable without rendering. Same inputs always produce same outputs.
 
@@ -16,7 +16,7 @@ A deterministic park management game where players balance fear and profit. Buil
 
 ---
 
-### Highlights
+#### Highlights
 
 - **Deterministic Simulation:** No hidden randomness. Seeded RNG where variation is needed. Reproducible runs, reliable tests.
 - **Three-Layer Architecture:** Core (pure functions), Runtime (Zustand store), UI (React + Phaser). Core has zero framework dependencies.
@@ -27,7 +27,7 @@ A deterministic park management game where players balance fear and profit. Buil
 
 ---
 
-### Tech Stack
+#### Tech Stack
 
 - React 19 + TypeScript (strict)
 - Phaser 3 for game rendering
@@ -38,6 +38,6 @@ A deterministic park management game where players balance fear and profit. Buil
 
 ---
 
-### Status
+#### Status
 
 Alpha complete, Beta in progress. Core loop complete with two-grid system, visitor emotions, spending, amenities, warnings, and death tracking. Staff system, room demolition, and save/load coming next.

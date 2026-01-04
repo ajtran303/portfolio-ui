@@ -10,9 +10,9 @@ images:
     alt: "Student view of lesson content with progress tracking"
 ---
 
-## LearnForge LMS
+### LearnForge LMS
 
-### Summary
+#### Summary
 
 A full-stack Learning Management System built with Ruby on Rails 8. Instructors create courses with rich text lessons and image attachments. Learners enroll, track progress, and navigate through content. Features Hotwire for real-time updates, Action Text for rich content editing, and 89% test coverage (75 RSpec examples).
 
@@ -20,7 +20,7 @@ A full-stack Learning Management System built with Ruby on Rails 8. Instructors 
 
 ---
 
-### Highlights
+#### Highlights
 
 - **Authentication & Authorization:** Secure login with bcrypt and role-based access control for Learners and Instructors
 - **Rich Text Lesson Editor:** Trix-powered editor with formatting tools, code snippets, and image attachments
@@ -32,7 +32,7 @@ A full-stack Learning Management System built with Ruby on Rails 8. Instructors 
 
 ---
 
-### Tech Stack
+#### Tech Stack
 
 - **Backend:** Ruby on Rails 8.1, PostgreSQL
 - **Frontend:** Hotwire (Turbo), Bootstrap 5
@@ -43,6 +43,6 @@ A full-stack Learning Management System built with Ruby on Rails 8. Instructors 
 
 ---
 
-### Live Demo
+#### Live Demo
 
 [LearnForge LMS](https://learnforge-lms.onrender.com/) - Requires login. Demo credentials available on request.

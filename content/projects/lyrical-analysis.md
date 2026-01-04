@@ -10,9 +10,9 @@ images:
     alt: "Side-by-side album comparison view"
 ---
 
-## Lyrical Analysis
+### Lyrical Analysis
 
-### Summary
+#### Summary
 
 A full-stack web application that analyzes song lyrics using natural language processing. Users search for an artist, select an album, and receive insights including hidden themes discovered through topic modeling, sentiment analysis across tracks, emotional profiling with 8 distinct emotions, and recurring metaphors. The retro Winamp-inspired interface makes NLP accessible to anyone interested in exploring the deeper patterns in their favorite music. 90% test coverage (350+ pytest examples).
 
@@ -20,7 +20,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ---
 
-### Highlights
+#### Highlights
 
 - **Multi-source lyrics retrieval** with Musixmatch and lyrics.ovh fallback chain
 - **Discogs API** for reliable artist and album metadata from any deployment environment
@@ -35,7 +35,7 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ---
 
-### Tech Stack
+#### Tech Stack
 
 - **Backend**: Python, Flask, Gunicorn, Celery
 - **Database**: PostgreSQL, SQLAlchemy, Redis
@@ -47,6 +47,6 @@ A full-stack web application that analyzes song lyrics using natural language pr
 
 ---
 
-### Live Demo
+#### Live Demo
 
 [Lyrical Analysis](https://artist-analyzer-web.onrender.com/)

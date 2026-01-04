@@ -10,9 +10,9 @@ images:
     alt: "Detailed metrics heatmap comparing dancers across songs"
 ---
 
-## Goth Dance Analyzer
+### Goth Dance Analyzer
 
-### Summary
+#### Summary
 
 A computer vision tool that analyzes and compares gothic dance styles using pose estimation and FFT rhythm detection. Dancers are recorded performing a curated setlist of darkwave and post-punk tracks, then MediaPipe extracts 33 body landmarks per frame. The system calculates movement metrics, detects rhythm patterns from arm velocity using frequency analysis, and generates dancer "fingerprints" with style archetypes. Built for a party experiment with friends to answer the question: "Who dances the most goth?"
 
@@ -20,7 +20,7 @@ A computer vision tool that analyzes and compares gothic dance styles using pose
 
 ---
 
-### Highlights
+#### Highlights
 
 - **Real-time skeleton tracking** with MediaPipe PoseLandmarker for 33-point body detection
 - **FFT rhythm detection** extracts movement BPM directly from arm velocity without audio
@@ -34,7 +34,7 @@ A computer vision tool that analyzes and compares gothic dance styles using pose
 
 ---
 
-### How Similarity Works
+#### How Similarity Works
 
 Similarity compares each metric between two dancers, measures how far apart they are, averages those differences, and inverts so "higher" means "more similar."
 
@@ -42,7 +42,7 @@ Example: If two dancers differ by 0.1 on Energy, 0.2 on Control, 0.0 on Groove, 
 
 ---
 
-### Tech Stack
+#### Tech Stack
 
 - **Computer Vision**: MediaPipe PoseLandmarker, OpenCV
 - **Signal Processing**: NumPy, SciPy (Fast Fourier Transform)
@@ -53,9 +53,9 @@ Example: If two dancers differ by 0.1 on Energy, 0.2 on Control, 0.0 on Groove, 
 
 ---
 
-### Metrics
+#### Metrics
 
-#### Raw Metrics
+##### Raw Metrics
 
 - **Arm Velocity** measures speed of arm movements across frames
 - **Movement Range** captures spatial extent of gestures
@@ -67,7 +67,7 @@ Example: If two dancers differ by 0.1 on Energy, 0.2 on Control, 0.0 on Groove, 
 - **Rhythm Strength** how pronounced the rhythmic pattern is
 - **Rhythm Consistency** how stable the rhythm is over time
 
-#### Summary Scores
+##### Summary Scores
 
 - **Energy** = average of arm velocity, movement range, and vertical motion
 - **Control** = average of symmetry and rhythm consistency
