@@ -2,7 +2,7 @@
 title: "Goth Dance Analyzer"
 order: 6
 images:
-  - url: "/images/goth-dance-analyzer/skeleton_tracking.png"
+  - url: "/images/goth-dance-analyzer/skeleton_tracking.gif"
     alt: "Skeleton overlay tracking dancer pose landmarks"
   - url: "/images/goth-dance-analyzer/summary.png"
     alt: "Summary page with dancer fingerprints and archetypes"
