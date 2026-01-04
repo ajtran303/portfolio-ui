@@ -12,6 +12,7 @@ export default async function HomePage() {
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
+    { label: "Resume", href: "/AJ_Tran_Resume.pdf", newTab: true },
   ];
 
   const aboutContent = [
