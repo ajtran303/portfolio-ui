@@ -16,8 +16,8 @@ export default async function HomePage() {
 
   const aboutContent = [
     "Hey, I'm AJ!",
-    "I specialize in Ruby, Java, Python, and modern JavaScript frameworks, designing scalable systems, high-traffic APIs, and efficient developer workflows.",
-    "I'm also passionate about mentoring, improving developer experience, and exploring AI-powered tools to enhance productivity.",
+    "By day: Ruby, Python, Java, TypeScript. I build systems that scale, modernize code that doesn't, and maintain the kind of test coverage that lets you sleep at night.",
+    'By night: NLP on album lyrics, computer vision for dance analysis, CLI tools for vinyl collectors. Projects that start with "What if?" and end with working code.',
   ];
 
   const socials = [
@@ -33,7 +33,7 @@ export default async function HomePage() {
       <section id="hero" className="page hero-page" aria-label="Hero">
         <Hero
           title="AJ Tran"
-          subtitle="Full-stack engineer building reliable backends, smooth APIs, and intuitive frontends."
+          subtitle="Full-stack software engineer. Enterprise scale by day. Personal scale by night."
           ctaText="View Projects"
           ctaLink="#projects"
         />
