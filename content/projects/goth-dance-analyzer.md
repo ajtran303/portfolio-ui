@@ -1,10 +1,10 @@
 ---
 title: "Goth Dance Analyzer"
 order: 6
-# images:
-#   - "/images/goth-dance-analyzer/skeleton_tracking.png"
-#   - "/images/goth-dance-analyzer/summary.png"
-#   - "/images/goth-dance-analyzer/detailed_metrics.png"
+images:
+  - "/images/goth-dance-analyzer/skeleton_tracking.png"
+  - "/images/goth-dance-analyzer/summary.png"
+  - "/images/goth-dance-analyzer/detailed_metrics.png"
 ---
 
 ## Goth Dance Analyzer
