@@ -41,8 +41,3 @@ A full-stack Learning Management System built with Ruby on Rails 8. Instructors 
 - **Testing:** RSpec, Capybara, FactoryBot, Shoulda Matchers
 - **Deployment:** Render
 
----
-
-#### Live Demo
-
-[LearnForge LMS](https://learnforge-lms.onrender.com/) - Click "Try Demo" to login as a student.

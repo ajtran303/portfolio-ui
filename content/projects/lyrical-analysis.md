@@ -45,8 +45,3 @@ A full-stack web application that analyzes song lyrics using natural language pr
 - **Infrastructure**: Docker, Docker Compose, Render
 - **Security**: Flask-Limiter, Flask-Talisman, Bleach
 
----
-
-#### Live Demo
-
-[Lyrical Analysis](https://artist-analyzer-web.onrender.com/)
