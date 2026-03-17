@@ -1,6 +1,6 @@
 ---
 title: "Lyrical Analysis"
-order: 1
+order: 3
 images:
   - url: "/images/lyrical-analysis/search_page.png"
     alt: "Search page with artist input field"

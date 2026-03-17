@@ -1,6 +1,6 @@
 ---
 title: "Vinyl Tracker"
-order: 7
+order: 9
 images:
   - url: "/images/vinyl-tracker/profile.png"
     alt: "Shareable profile card with collector type and stats"

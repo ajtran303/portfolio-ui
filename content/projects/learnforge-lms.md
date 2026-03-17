@@ -1,6 +1,6 @@
 ---
 title: "LearnForge LMS"
-order: 3
+order: 5
 images:
   - url: "/images/learnforge-lms/instructor_course_dash.png"
     alt: "Instructor dashboard showing course management interface"

@@ -1,6 +1,6 @@
 ---
 title: "Goth Dance Analyzer"
-order: 6
+order: 8
 images:
   - url: "/images/goth-dance-analyzer/skeleton_tracking.gif"
     alt: "Skeleton overlay tracking dancer pose landmarks"

@@ -1,6 +1,6 @@
 ---
 title: "Haunted House Tycoon"
-order: 4
+order: 6
 images:
   - url: "/images/haunt-tycoon/gameplay.gif"
     alt: "Gameplay showing visitors navigating a haunted house attraction"
